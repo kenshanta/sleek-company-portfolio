@@ -42,7 +42,7 @@ export default function AppHeader() {
           display={"flex"}
           flexDirection={"row"}
         >
-          <Text fontSize="larger">"Logistics for &nbsp;</Text>
+          <Text fontSize="larger">"Logistics for&nbsp;</Text>
           <Text fontWeight={"bold"} fontSize="larger">
             everyone"
           </Text>

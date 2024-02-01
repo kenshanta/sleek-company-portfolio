@@ -6,33 +6,27 @@ import { MdAlternateEmail } from "react-icons/md";
 export default function AppFooter() {
   return (
     <Grid
+      className="App-footer"
       display={"flex"}
       justifyContent={"space-between"}
       gap="5"
       paddingX={"9"}
       paddingY={"7"}
+      alignItems={"center"}
     >
-      <Grid>
-        <GridItem
-          display={"flex"}
-          flexDirection={"row"}
-          alignContent={"center"}
-          alignItems={"center"}
-          gap={"4"}
-        >
-          <GridItem>
-            <Text fontWeight={"bold"} fontSize={"larger"}>
-              Get in touch:
-            </Text>
-          </GridItem>
-          <GridItem>
-            <FaInstagram size={"6vmin"} />
-          </GridItem>
-          <GridItem>
-            <MdAlternateEmail size={"6vmin"} />
-          </GridItem>
+      <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
+        <GridItem display={"flex"} alignItems={"center"}>
+          <Text fontWeight={"bold"} fontSize={"larger"}>
+            Get in touch:
+          </Text>
         </GridItem>
-      </Grid>
+        <GridItem>
+          <FaInstagram size={"6vmin"} />
+        </GridItem>
+        <GridItem>
+          <MdAlternateEmail size={"6vmin"} />
+        </GridItem>
+      </GridItem>
       <GridItem>
         <img src={logo} className="App-logo" alt="logo" />
       </GridItem>

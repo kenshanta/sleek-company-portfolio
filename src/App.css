@@ -23,6 +23,11 @@
   color: white;
   height: 90vh;
 }
+.App-footer {
+  background-color: black;
+  color: white;
+  height: 25vh;
+}
 
 .App-body {
   background-color: white;

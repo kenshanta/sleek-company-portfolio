@@ -1,7 +1,7 @@
 import { GridItem, Text } from "@chakra-ui/react";
 export default function AppBody() {
   return (
-    <GridItem background={"white"}>
+    <GridItem background={"white"} borderRadius={"4%"}>
       <Text fontSize="3xl">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
