@@ -1,36 +1,41 @@
-export default function Footer() {
+import { Grid, GridItem, Text } from "@chakra-ui/react";
+import logo from "../mockLogo.svg";
+import { FaInstagram } from "react-icons/fa6";
+import { MdAlternateEmail } from "react-icons/md";
+
+export default function AppFooter() {
   return (
-    <>
-      <div id="sidebar">
-        <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
-            />
-            <div id="search-spinner" aria-hidden hidden={true} />
-            <div className="sr-only" aria-live="polite"></div>
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href={`/contacts/1`}>Your Name</a>
-            </li>
-            <li>
-              <a href={`/contacts/2`}>Your Friend</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="detail"></div>
-    </>
+    <Grid
+      display={"flex"}
+      justifyContent={"space-between"}
+      gap="5"
+      paddingX={"9"}
+      paddingY={"7"}
+    >
+      <Grid>
+        <GridItem
+          display={"flex"}
+          flexDirection={"row"}
+          alignContent={"center"}
+          alignItems={"center"}
+          gap={"4"}
+        >
+          <GridItem>
+            <Text fontWeight={"bold"} fontSize={"larger"}>
+              Get in touch:
+            </Text>
+          </GridItem>
+          <GridItem>
+            <FaInstagram size={"6vmin"} />
+          </GridItem>
+          <GridItem>
+            <MdAlternateEmail size={"6vmin"} />
+          </GridItem>
+        </GridItem>
+      </Grid>
+      <GridItem>
+        <img src={logo} className="App-logo" alt="logo" />
+      </GridItem>
+    </Grid>
   );
 }

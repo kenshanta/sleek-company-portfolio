@@ -1,11 +1,11 @@
 .App {
   background-color: black;
   text-align: center;
-  padding: 1rem;
+  height: 100%;
 }
 
 .App-logo {
-  height: 5vmin;
+  height: 8vmin;
   pointer-events: none;
 }
 
@@ -13,12 +13,21 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+  .App-logo-footer {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
 .App-header {
   background-color: black;
-  font-size: calc(10px + 2vmin);
   color: white;
+  height: 90vh;
+}
+
+.App-body {
+  background-color: white;
+  color: black;
+  height: 100vh; /* should be auto when content is available*/
 }
 
 .App-link {
@@ -32,4 +41,24 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.Header-title {
+  /* margin-top: 1vh; */
+  /* height: 100%; */
+}
+
+.App-logo-footer {
+  height: 7vmin;
+}
+
+@font-face {
+  font-family: "PopArt";
+  src: local("PopArt"), url(./fonts/PopArt-Regular.ttf), format("truetype");
+}
+
+.popart {
+  font-family: "PopArt";
+  color: whitesmoke;
+  font-style: italic;
 }

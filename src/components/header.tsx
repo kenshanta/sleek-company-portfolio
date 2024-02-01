@@ -1,36 +1,53 @@
-export default function Header() {
+import {
+  Grid,
+  GridItem,
+  Menu,
+  MenuButton,
+  Text,
+  IconButton,
+} from "@chakra-ui/react";
+import logo from "../mockLogo.svg";
+import { ReactComponent as Hamburger } from "../hamburgerMock.svg";
+
+export default function AppHeader() {
   return (
-    <>
-      <div id="sidebar">
-        <h1>React Router Contacts</h1>
-        <div>
-          <form id="search-form" role="search">
-            <input
-              id="q"
-              aria-label="Search contacts"
-              placeholder="Search"
-              type="search"
-              name="q"
+    <Grid className="App-header">
+      <Grid
+        templateColumns="repeat(2, 1fr)"
+        gap="5"
+        paddingX={"9"}
+        paddingY={"9"}
+      >
+        <GridItem>
+          <img src={logo} className="App-logo" alt="logo" />
+        </GridItem>
+        <GridItem colEnd={6}>
+          <Menu>
+            <MenuButton
+              as={IconButton}
+              aria-label="Options"
+              icon={<Hamburger />}
+              outline={"none"}
+              background={"none"}
             />
-            <div id="search-spinner" aria-hidden hidden={true} />
-            <div className="sr-only" aria-live="polite"></div>
-          </form>
-          <form method="post">
-            <button type="submit">New</button>
-          </form>
-        </div>
-        <nav>
-          <ul>
-            <li>
-              <a href={`/contacts/1`}>Your Name</a>
-            </li>
-            <li>
-              <a href={`/contacts/2`}>Your Friend</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div id="detail"></div>
-    </>
+          </Menu>
+        </GridItem>
+      </Grid>
+      <GridItem className="Header-title">
+        <Text className="popart" fontSize="6xl">
+          Work 2 Gether
+        </Text>
+        <GridItem
+          justifyContent={"center"}
+          display={"flex"}
+          flexDirection={"row"}
+        >
+          <Text fontSize="larger">"Logistics for &nbsp;</Text>
+          <Text fontWeight={"bold"} fontSize="larger">
+            everyone"
+          </Text>
+        </GridItem>
+      </GridItem>
+    </Grid>
   );
 }

@@ -6,6 +6,7 @@ import Root from "./routes/root";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./error-page";
 import { ChakraProvider } from "@chakra-ui/react";
+import "./fonts/PopArt-Regular.ttf";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,6 @@ root.render(
     <ChakraProvider>
       <RouterProvider router={router} />
     </ChakraProvider>
-    {/* <App /> */}
   </React.StrictMode>
 );
 
