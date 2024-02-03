@@ -2,10 +2,11 @@ import { Grid, GridItem, Text } from "@chakra-ui/react";
 import logo from "../mockLogo.svg";
 import { FaInstagram } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
+import { FiPhoneCall } from "react-icons/fi";
 
 export default function AppFooter() {
   return (
-    <Grid
+    <GridItem
       className="App-footer"
       display={"flex"}
       justifyContent={"space-between"}
@@ -26,10 +27,13 @@ export default function AppFooter() {
         <GridItem>
           <MdAlternateEmail size={"6vmin"} />
         </GridItem>
+        <GridItem>
+          <FiPhoneCall size={"6vmin"} />
+        </GridItem>
       </GridItem>
       <GridItem>
         <img src={logo} className="App-logo" alt="logo" />
       </GridItem>
-    </Grid>
+    </GridItem>
   );
 }
