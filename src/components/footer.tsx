@@ -1,5 +1,5 @@
-import { Grid, GridItem, Text } from "@chakra-ui/react";
-import logo from "../mockLogo.svg";
+import { GridItem, Text } from "@chakra-ui/react";
+import BrandLogo from "../brandLogo.svg";
 import { FaInstagram } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
@@ -32,7 +32,7 @@ export default function AppFooter() {
         </GridItem>
       </GridItem>
       <GridItem>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={BrandLogo} className="App-logo" alt="logo" />
       </GridItem>
     </GridItem>
   );

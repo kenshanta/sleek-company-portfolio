@@ -8,24 +8,17 @@
   background-color: black;
   text-align: center;
   height: 100%;
+  font-family: "Protest";
 }
 
 .App-logo {
-  height: 8vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
 .hamburger-logo {
   height: 8vmin;
   pointer-events: none;
-}
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-  .App-logo-footer {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -49,15 +42,6 @@
   color: whitesmoke;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .Header-title {
   /* margin-top: 1vh; */
   /* height: 100%; */
@@ -73,7 +57,7 @@
   height: 100%;
 } */
 svg text {
-  font-family: "Protest", sans-serif;
+  font-family: "Protest";
   text-transform: uppercase;
   animation: stroke 5s forwards alternate;
   stroke-width: 90px;
