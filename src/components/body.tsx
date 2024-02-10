@@ -50,30 +50,6 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           Who we are:
         </Text>
       </GridItem>
-
-      <Text fontSize={"larger"}>Deutsch</Text>
-      <Text>
-        &nbsp; Work2Gether spezifiziert sich auf die qualitative Umsetzung von
-        Dienstleistungen im Bereich der Eventgastronomie, auf Messen und der
-        Hotellerie. Unser hauptsächlicher Fokus liegt auf alle Aufgaben im
-        Bereich der Logistik Ihrer Veranstaltung. Dazu gehören unter anderem
-        Auf- und Abbau, Event Hands, Runner, Lagertätigkeiten, Stewarding ,
-        sowie Koordinations- und Leitungspersonal.
-        <br />
-        &nbsp; Wir möchten unseren Kunden einen Qualitätsstandard bieten, der
-        den reibungslosen Ablauf ihrer Veranstaltung versichert. Unsere Formel
-        für Ihren Erfolg ist Effizienz und Teamwork. Aus eigener Erfahrung ist
-        uns bewusst, dass die Logistik der arbeitsintensivste Teil der
-        Veranstaltung ist und alle anderen von ihr abhängig sind. Wir kennen es
-        alle: Wenn die Logistik baden geht, geht die Veranstaltung baden.
-        Deshalb schulen wir unserer Personal gerne auf die Ansprüche unserer
-        individuellen Kunden. Uns ist am wichtigsten zuverlässig und flexibel
-        kompetentes Personal für Ihre Veranstaltungen zu stellen und dieses
-        Personal mittel- und langfristig wiederholt in Ihren Veranstaltungen
-        einzusetzen.
-      </Text>
-      <br />
-      <Text fontSize={"larger"}>English</Text>
       <Text>
         &nbsp; Work2Gether is specified on the realization of services in the
         field of event gastronomy, expos and conventions and in the hospitality
@@ -107,24 +83,24 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           paddingTop={1}
         >
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
-          <Text fontSize={"larger"}>Sevag Mekhitarian</Text>
+          <Text fontSize={"large"}>Sevag Mkhitarian</Text>
         </GridItem>
-        <Text fontSize={"large"}>
-          Seit über 7 Jahren habe ich Erfahrungen im Bereich Events und deren
-          Logistik. Anfangs war ich ganz normal als Logistiker in Teilzeit auf
-          diversen Events unterwegs und habe über Zeit immer mehr Verantwortung
-          übernommen, da mein Arbeitsethos und meine Ausstrahlung stets gut mit
-          Kunden resonierte. Ich schlüpfte in die Rolle eines Teamleiters, der
-          innerhalb eines Teams aber auch für Kunden als Ansprechpartner gilt.
-          Nach einigen Jahren übernahm ich die Verantwortung für die gesamte
-          Logistik von Veranstaltungen als Logistikleiter. Von Events bis Hotels
-          und Messen habe ich die Verantwortung konsequent übernommen und habe
-          dadurch auch den Gedanken entwickelt, mich selbstständig zu machen.
-          Work2Gether ist für mich der Traum des perfekten Teams, das Kriterien
-          wie Qualität, Loyalität und Teamgeist als Leitmotive verwendet.
-          Zusammen mit meinem Team möchte ich die Erwartungen unserer Kunden
-          übertreffen und einen bleibenden positiven Eindruck hinterlassen.
-          Lasst uns zusammen großartiges Erreichen!{" "}
+        <Text fontSize={"medium"}>
+          I have over 7 years of experience in the field of events and
+          logistics. In the beginning I was just a regular part-time logistics
+          employee, making my way through various events in Berlin and gathering
+          experience. Over the course of time I received more and more
+          responsibility because my work ethic and personality resonated
+          positively with the clients. I stepped into the role of a team leader,
+          who acts as a point of contact between the staff and clients. After a
+          couple years I took more responsibility and was in charge of the whole
+          logistics department of diverse events, acting as a logistics
+          coordinator. From events to hotels to expos I have consistently taken
+          leadership and began developing the idea of starting my own business.
+          Work2Gether is my personal dream of the perfect team, that respects
+          quality, loyalty and team spirit as their lead motif. Together with my
+          team I want to exceed the expectations of our clients and leave a
+          positive impression. Lets reach big things together!
           <i>We rise by lifting others.</i>
         </Text>
       </GridItem>
@@ -132,7 +108,7 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
         <Text fontSize={"2xl"} textDecoration={"underline"}>
           Apply to be a part of our team
         </Text>
-        <Text paddingTop={3} fontSize={"large"}>
+        <Text paddingTop={3} fontSize={"medium"}>
           Are you a student between 18-25 years old and is looking for a
           part-time employment in a fast-paced fun environment?
         </Text>

@@ -10,7 +10,7 @@ import {
   Button,
   Box,
 } from "@chakra-ui/react";
-import BlackLogo from "../logo-black.svg";
+import BlackLogo from "../logo-white.svg";
 import TermsAndLiscences from "./termsAndLiscences";
 import PrivacyAndPolicy from "./privacyPolicy";
 import { VscChromeClose } from "react-icons/vsc";
