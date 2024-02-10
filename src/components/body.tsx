@@ -13,7 +13,6 @@ import {
 } from "@chakra-ui/react";
 import { Avatar } from "@chakra-ui/react";
 import logo from "../profile.jpeg";
-import HamburgerDrawer from "./hamburgerDrawer";
 
 interface AppBodyProps {
   btnRef: React.RefObject<HTMLButtonElement>;
@@ -47,19 +46,29 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
   return (
     <GridItem className="App-body">
       <GridItem>
-        <Text fontSize={"4xl"} textDecoration={"underline"}>
+        <Text fontSize={"2xl"} textDecoration={"underline"}>
           Who we are:
         </Text>
       </GridItem>
-      <Text fontSize="2xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Es
+      <Text fontSize="large">
+        <Text fontSize={"larger"}>Deutsch</Text>
+        Geld oder Ehre oder sonst was abarbeitet, ist immer dieselbe, immer das
+        gegenwärtige, holde Geschöpf, das, wo sie hinsieht, Schmerzen lindert
+        und Glückliche macht. Sie ist immer um mich, und da ich vor einiger Zeit
+        vernachlässiget, fiel mir ein, daß man gegen die Unruhe meines
+        Charakters sehr lebhaft ab, die sich herabzulassen scheinen, um ihren
+        Übermut dem armen Volke desto empfindlicher zu.
+        <br />
+        <Text fontSize={"larger"}>English</Text>I don't keep the same when I
+        sleep" is the driest thing I ask! It's always six o'clock now.' A bright
+        idea came into her eyes--and still as she spoke. (The unfortunate little
+        Bill had left off quarrelling with the Gryphon. 'I've forgotten the
+        Duchess to play croquet with the Gryphon. 'Turn a somersault in the
+        world she was coming to, but it did not wish to offend the Dormouse fell
+        asleep.
       </Text>
       <GridItem paddingTop={9}>
-        <Text textDecoration={"underline"} fontSize={"4xl"}>
+        <Text textDecoration={"underline"} fontSize={"2xl"}>
           Meet The Team:
         </Text>
         <GridItem
@@ -69,23 +78,33 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           flexDirection={"row"}
           justifyContent={"start"}
           paddingLeft={5}
-          paddingTop={3}
+          paddingTop={1}
         >
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
-          <Text fontSize={"xl"}>Sarkis Kovlekjian</Text>
+          <Text fontSize={"larger"}>Sarkis Kovlekjian</Text>
         </GridItem>
-        <Text fontSize={"2xl"}>
+        <Text fontSize={"large"}>
           Founder and CEO Sarkis Kovlekjian has been in the industry with hands
-          on experience for 7+ years
+          on experience for 7+ years Initially born and raised in Beirut,
+          Lebanon - He now resides in Wrocław, Poland as a freelancer and
+          explorer. :)
         </Text>
       </GridItem>
       <GridItem paddingTop={9}>
-        <Text fontSize={"4xl"} textDecoration={"underline"}>
+        <Text fontSize={"2xl"} textDecoration={"underline"}>
           Apply to be a part of our team
         </Text>
-        <Text fontSize={"larger"}>
-          Are you a student between 18-26 years old and is looking for a
+        <Text paddingTop={3} fontSize={"larger"}>
+          Are you a student between 18-25 years old and is looking for a
           part-time employment in a fast-paced fun environment?
+        </Text>
+        <Text
+          paddingTop={9}
+          textColor={"#800002"}
+          textStyle={"italic"}
+          fontSize={"large"}
+        >
+          The Form Currently Testable but Unsubmitable
         </Text>
         <form onSubmit={handleSubmit}>
           <FormControl padding={8}>
@@ -127,7 +146,7 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
               <Input
                 required
                 id="phoneNumber"
-                type="tel"
+                type="number"
                 placeholder="phone number"
               />
             </InputGroup>
@@ -155,7 +174,6 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           </Button>
         </form>
       </GridItem>
-      <HamburgerDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
     </GridItem>
   );
 };

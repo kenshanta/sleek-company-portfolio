@@ -1,5 +1,5 @@
 import { GridItem, Text } from "@chakra-ui/react";
-import BrandLogo from "../brandLogo.svg";
+import BrandLogo from "../logo-white.svg";
 import { FaInstagram } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
@@ -10,9 +10,8 @@ export default function AppFooter() {
       className="App-footer"
       display={"flex"}
       justifyContent={"space-between"}
-      gap="5"
-      paddingX={"9"}
-      paddingY={"7"}
+      paddingX={"7"}
+      paddingTop={"7"}
       alignItems={"center"}
     >
       <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
@@ -22,13 +21,19 @@ export default function AppFooter() {
           </Text>
         </GridItem>
         <GridItem>
-          <FaInstagram size={"6vmin"} />
+          <a href="https://www.instagram.com/worktwogether/">
+            <FaInstagram size={"6vmin"} />
+          </a>
         </GridItem>
         <GridItem>
-          <MdAlternateEmail size={"6vmin"} />
+          <a href="mailto:user@domain.com?Subject=Hello%20User">
+            <MdAlternateEmail size={"6vmin"} />
+          </a>
         </GridItem>
         <GridItem>
-          <FiPhoneCall size={"6vmin"} />
+          <a href="tel:+491637874040">
+            <FiPhoneCall size={"6vmin"} />
+          </a>
         </GridItem>
       </GridItem>
       <GridItem>

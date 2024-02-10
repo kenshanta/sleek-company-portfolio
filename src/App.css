@@ -12,11 +12,12 @@
 }
 
 .App-logo {
-  height: 10vmin;
+  width: 12vmin;
   pointer-events: none;
 }
 
 .hamburger-logo {
+  padding-top: 0.1rem;
   height: 8vmin;
   pointer-events: none;
 }
@@ -29,7 +30,7 @@
 .App-footer {
   background-color: black;
   color: white;
-  height: 22vh;
+  height: 17vh;
 }
 
 .App-body {
@@ -104,7 +105,10 @@ svg text {
   animation: slidein 25s forwards;
   font-size: 3.5vw;
 }
-
+#spanInDivSec {
+  animation: showup 30s forwards;
+  font-size: 3.5vw;
+}
 @keyframes showup {
   0% {
     opacity: 0;
