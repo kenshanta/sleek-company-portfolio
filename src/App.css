@@ -93,7 +93,7 @@ svg text {
 
 #firstDiv {
   animation: showup 19s forwards;
-  font-size: 3.5vw;
+  font-size: 4.5vw;
 }
 
 #secondDiv {
@@ -103,11 +103,11 @@ svg text {
 
 #spanInDiv {
   animation: slidein 25s forwards;
-  font-size: 3.5vw;
+  font-size: 4.5vw;
 }
 #spanInDivSec {
   animation: showup 30s forwards;
-  font-size: 3.5vw;
+  font-size: 4.5vw;
 }
 @keyframes showup {
   0% {

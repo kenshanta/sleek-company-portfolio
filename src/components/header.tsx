@@ -46,21 +46,17 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
             display={"flex"}
             flexDirection={"row"}
           >
-            <Text fontSize="2xl" id="firstDiv">
-              Teamwork&nbsp;
-            </Text>
+            <Text id="firstDiv">Teamwork&nbsp;</Text>
             <Box
               id="secondDiv"
               justifyContent={"start"}
               display={"flex"}
               flexDirection={"row"}
             >
-              <Text fontSize="2xl" id="spanInDiv">
-                makes <b>everyone</b>&nbsp;
+              <Text id="spanInDiv">
+                makes&nbsp;<b>everyone</b>&nbsp;
               </Text>
-              <Text fontSize={"2xl"} id="spanInDivSec">
-                succeed
-              </Text>
+              <Text id="spanInDivSec">succeed</Text>
             </Box>
           </GridItem>
         </GridItem>
