@@ -52,6 +52,14 @@
   height: 7vmin;
 }
 
+.Menu-drawer {
+  font-family: "Protest";
+}
+
+.Menu-drawer-logo {
+  height: 33vmin;
+}
+
 /* svg {
   font-family: "Protest", sans-serif;
   width: 100%;

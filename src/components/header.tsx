@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, GridItem, Text, Box } from "@chakra-ui/react";
+import { Grid, GridItem, Text, Box, Button } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
 import Hamburger from "../hamburgerMock.svg";
 
@@ -9,28 +9,23 @@ interface AppHeaderProps {
   clicked: () => void;
 }
 const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
-  // TODO: test why Button onClick wont fire up log that isnt logging in console
-  // const tes = () => {
-  //   console.log("cicked");
-  //   onOpen();
-  // };
   return (
     <>
       <Grid className="App-header">
-        <Grid templateColumns="repeat(2, 1fr)" paddingX={"6"} paddingTop={"9"}>
-          <GridItem>
+        <Grid
+          justifyContent={"space-between"}
+          flexDirection={"row"}
+          templateColumns="repeat(2, 1fr)"
+          paddingX={"6"}
+          paddingTop={"9"}
+        >
+          <GridItem colStart={0}>
             <img src={BrandLogo} className="App-logo" alt="logo" />
           </GridItem>
           <GridItem colEnd={6}>
-            {/* <Button
-              variant={"none"}
-              // ref={btnRef}
-
-              onClick={clicked}
-              padding={0}
-            > */}
-            <img src={Hamburger} className="hamburger-logo" alt="hamburger" />
-            {/* </Button> */}
+            <Button justifyContent={"start"} variant={"none"} onClick={clicked}>
+              <img src={Hamburger} className="hamburger-logo" alt="hamburger" />
+            </Button>
           </GridItem>
         </Grid>
         <GridItem>

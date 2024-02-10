@@ -11,7 +11,7 @@ export default function HomePage() {
 
   // TODO: Clean up after testing click issue
   const clicked = () => {
-    console.log("clicked");
+    onOpen();
   };
   return (
     <Grid className="App" gap={9}>

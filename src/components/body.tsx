@@ -50,22 +50,48 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           Who we are:
         </Text>
       </GridItem>
-      <Text fontSize="large">
-        <Text fontSize={"larger"}>Deutsch</Text>
-        Geld oder Ehre oder sonst was abarbeitet, ist immer dieselbe, immer das
-        gegenwärtige, holde Geschöpf, das, wo sie hinsieht, Schmerzen lindert
-        und Glückliche macht. Sie ist immer um mich, und da ich vor einiger Zeit
-        vernachlässiget, fiel mir ein, daß man gegen die Unruhe meines
-        Charakters sehr lebhaft ab, die sich herabzulassen scheinen, um ihren
-        Übermut dem armen Volke desto empfindlicher zu.
+
+      <Text fontSize={"larger"}>Deutsch</Text>
+      <Text>
+        &nbsp; Work2Gether spezifiziert sich auf die qualitative Umsetzung von
+        Dienstleistungen im Bereich der Eventgastronomie, auf Messen und der
+        Hotellerie. Unser hauptsächlicher Fokus liegt auf alle Aufgaben im
+        Bereich der Logistik Ihrer Veranstaltung. Dazu gehören unter anderem
+        Auf- und Abbau, Event Hands, Runner, Lagertätigkeiten, Stewarding ,
+        sowie Koordinations- und Leitungspersonal.
         <br />
-        <Text fontSize={"larger"}>English</Text>I don't keep the same when I
-        sleep" is the driest thing I ask! It's always six o'clock now.' A bright
-        idea came into her eyes--and still as she spoke. (The unfortunate little
-        Bill had left off quarrelling with the Gryphon. 'I've forgotten the
-        Duchess to play croquet with the Gryphon. 'Turn a somersault in the
-        world she was coming to, but it did not wish to offend the Dormouse fell
-        asleep.
+        &nbsp; Wir möchten unseren Kunden einen Qualitätsstandard bieten, der
+        den reibungslosen Ablauf ihrer Veranstaltung versichert. Unsere Formel
+        für Ihren Erfolg ist Effizienz und Teamwork. Aus eigener Erfahrung ist
+        uns bewusst, dass die Logistik der arbeitsintensivste Teil der
+        Veranstaltung ist und alle anderen von ihr abhängig sind. Wir kennen es
+        alle: Wenn die Logistik baden geht, geht die Veranstaltung baden.
+        Deshalb schulen wir unserer Personal gerne auf die Ansprüche unserer
+        individuellen Kunden. Uns ist am wichtigsten zuverlässig und flexibel
+        kompetentes Personal für Ihre Veranstaltungen zu stellen und dieses
+        Personal mittel- und langfristig wiederholt in Ihren Veranstaltungen
+        einzusetzen.
+      </Text>
+      <br />
+      <Text fontSize={"larger"}>English</Text>
+      <Text>
+        &nbsp; Work2Gether is specified on the realization of services in the
+        field of event gastronomy, expos and conventions and in the hospitality
+        industry. Our main focus are all responsibilities in the field of
+        logistics of your event. This includes setup and tear-down, event hands,
+        event runners, storage activities, stewarding as well as coordination
+        and leadership staff.
+        <br />
+        &nbsp; We want to offer our clients a quality standard that ensures the
+        smoothest course through your event. Our formula for your success is
+        efficiency and teamwork. We know from our own experience that logistics
+        is the most labor-intensive department of any event and all others
+        depend on it. We all know this too well: when the logistics goes down
+        the well, the whole event goes down with it. This is why we are
+        delighted to train our staff according to the individual demands of our
+        client. It is of uttermost importance for us to be flexible and reliable
+        in providing competent staff for your event and to create a reoccurring
+        relationship with you.
       </Text>
       <GridItem paddingTop={9}>
         <Text textDecoration={"underline"} fontSize={"2xl"}>
@@ -81,20 +107,32 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           paddingTop={1}
         >
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
-          <Text fontSize={"larger"}>Sarkis Kovlekjian</Text>
+          <Text fontSize={"larger"}>Sevag Mekhitarian</Text>
         </GridItem>
         <Text fontSize={"large"}>
-          Founder and CEO Sarkis Kovlekjian has been in the industry with hands
-          on experience for 7+ years Initially born and raised in Beirut,
-          Lebanon - He now resides in Wrocław, Poland as a freelancer and
-          explorer. :)
+          Seit über 7 Jahren habe ich Erfahrungen im Bereich Events und deren
+          Logistik. Anfangs war ich ganz normal als Logistiker in Teilzeit auf
+          diversen Events unterwegs und habe über Zeit immer mehr Verantwortung
+          übernommen, da mein Arbeitsethos und meine Ausstrahlung stets gut mit
+          Kunden resonierte. Ich schlüpfte in die Rolle eines Teamleiters, der
+          innerhalb eines Teams aber auch für Kunden als Ansprechpartner gilt.
+          Nach einigen Jahren übernahm ich die Verantwortung für die gesamte
+          Logistik von Veranstaltungen als Logistikleiter. Von Events bis Hotels
+          und Messen habe ich die Verantwortung konsequent übernommen und habe
+          dadurch auch den Gedanken entwickelt, mich selbstständig zu machen.
+          Work2Gether ist für mich der Traum des perfekten Teams, das Kriterien
+          wie Qualität, Loyalität und Teamgeist als Leitmotive verwendet.
+          Zusammen mit meinem Team möchte ich die Erwartungen unserer Kunden
+          übertreffen und einen bleibenden positiven Eindruck hinterlassen.
+          Lasst uns zusammen großartiges Erreichen!{" "}
+          <i>We rise by lifting others.</i>
         </Text>
       </GridItem>
       <GridItem paddingTop={9}>
         <Text fontSize={"2xl"} textDecoration={"underline"}>
           Apply to be a part of our team
         </Text>
-        <Text paddingTop={3} fontSize={"larger"}>
+        <Text paddingTop={3} fontSize={"large"}>
           Are you a student between 18-25 years old and is looking for a
           part-time employment in a fast-paced fun environment?
         </Text>
@@ -106,7 +144,7 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
         >
           The Form Currently Testable but Unsubmitable
         </Text>
-        <form onSubmit={handleSubmit}>
+        <form id="applicationId" onSubmit={handleSubmit}>
           <FormControl padding={8}>
             <FormLabel display={"flex"} flexDirection={"row"} id="fullName">
               Full Name&nbsp; <Text textColor={"#800002"}>*</Text>

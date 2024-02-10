@@ -19,11 +19,11 @@ const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  <div>
     <ChakraProvider>
       <RouterProvider router={router} />
     </ChakraProvider>
-  </React.StrictMode>
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

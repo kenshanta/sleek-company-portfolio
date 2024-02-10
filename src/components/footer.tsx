@@ -7,6 +7,7 @@ import { FiPhoneCall } from "react-icons/fi";
 export default function AppFooter() {
   return (
     <GridItem
+      id="componentToScrollTo"
       className="App-footer"
       display={"flex"}
       justifyContent={"space-between"}
