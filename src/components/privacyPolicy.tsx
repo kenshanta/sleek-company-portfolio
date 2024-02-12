@@ -1,13 +1,22 @@
-import { Text } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 
 interface PrivacyAndPolicyProps {
   isHidden: boolean;
 }
 const PrivacyAndPolicy: React.FC<PrivacyAndPolicyProps> = ({ isHidden }) => {
   return (
-    // <Text>
-    <div hidden={isHidden}>
-      <Text fontWeight="bold" fontSize="xl">
+    <Box
+      hidden={isHidden}
+      padding={{
+        base: "49% 1.9rem 0  1.9rem",
+        sm: "35rem 3.5rem 0  3.5rem",
+        md: "10rem 7rem 0rem 7rem",
+        lg: "6rem 10rem 0 10rem",
+        xl: "15rem 23.5rem 0 23.5rem",
+        "2xl": "6rem 31rem 0 31rem",
+      }}
+    >
+      <Text fontWeight="bold">
         Google Maps General <b>Privacy and Policy</b> of Work2gether UC - May
         2024
       </Text>
@@ -62,7 +71,6 @@ const PrivacyAndPolicy: React.FC<PrivacyAndPolicyProps> = ({ isHidden }) => {
           </li>
         </ul>
       </section>
-
       <section>
         <Text fontWeight="bold">
           Minimum Duty Periods, Surcharges, and Billing
@@ -80,13 +88,9 @@ const PrivacyAndPolicy: React.FC<PrivacyAndPolicyProps> = ({ isHidden }) => {
               and surcharges for public holidays.
             </Text>
           </li>
-          {/* Add more list items for remaining bullet points */}
         </ul>
       </section>
-
-      {/* Repeat similar sections for remaining bullet points */}
-    </div>
-    // </Text>
+    </Box>
   );
 };
 

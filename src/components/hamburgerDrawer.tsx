@@ -10,7 +10,7 @@ import {
   Button,
   Box,
 } from "@chakra-ui/react";
-import BlackLogo from "../logo-white.svg";
+import BrandWhiteLogo from "../logo-white.svg";
 import TermsAndLiscences from "./termsAndLiscences";
 import PrivacyAndPolicy from "./privacyPolicy";
 import { VscChromeClose } from "react-icons/vsc";
@@ -28,7 +28,7 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
   const [isTermsHidden, setIsTermsHidden] = React.useState(true);
   const [isPrivacyHidden, setIsPrivacyHidden] = React.useState(true);
   const [isNavButtonsHidden, setIsNavButtonsHidden] = React.useState(false);
-  const [currentNav, setCurrentNav] = React.useState("Menu");
+  const [currentNav, setCurrentNav] = React.useState("");
   const scrollToIndex = (id: string) => {
     const divElement = document.getElementById(id);
     onClose();
@@ -49,41 +49,39 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     setIsNavButtonsHidden(false);
     setIsTermsHidden(true);
     setIsPrivacyHidden(true);
-    setCurrentNav("Menu");
+    setCurrentNav("");
   };
   return (
     <Drawer
       finalFocusRef={btnRef}
-      placement="right"
+      placement="top"
       onClose={onClose}
       isOpen={isOpen}
-      size={"full"}
+      size={"xs"}
+      autoFocus={false}
     >
       <DrawerOverlay />
       <DrawerContent className="Menu-drawer">
-        <DrawerCloseButton
-          padding={9}
-          marginTop={3}
-          variant={"none"}
-          fontSize={"3xl"}
-          onClick={() => onCloseSubNavMenu()}
-        />
+        <DrawerCloseButton fontSize={"1.3rem"} variant={"none"} />
         <DrawerHeader
           display={"flex"}
           flexDirection={"column"}
           justifyContent={"start"}
-          fontSize={"2xl"}
-          borderBottomWidth=".5px"
+          fontSize={"large"}
+          borderBottomWidth=".9px"
         >
           <Box>
-            <img className="Menu-drawer-logo" src={BlackLogo} alt="blackLogo" />
+            <img
+              className="Menu-drawer-logo"
+              src={BrandWhiteLogo}
+              alt="blackLogo"
+            />
           </Box>
           <Box display={"flex"} justifyContent={"end"}>
-            <Text fontSize={"4xl"}>{currentNav}</Text>
+            <Text fontSize={"2xl"}>{currentNav}</Text>
           </Box>
         </DrawerHeader>
         <Button
-          size={"lg"}
           variant={"none"}
           alignContent={"center"}
           justifyContent={"start"}
@@ -96,43 +94,45 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
         <DrawerBody
           display={"flex"}
           flexDirection={"column"}
-          justifyContent={"start"}
-          columnGap={10}
+          justifyContent={"center"}
+          alignContent={"center"}
+          alignItems={"center"}
+          gap={10}
+          paddingBottom={9}
         >
           <Button
             onClick={() => scrollToIndex("componentToScrollTo")}
             variant={"none"}
-            padding={9}
             hidden={isNavButtonsHidden}
+            width={"fit-content"}
           >
-            <Text fontSize={"3xl"}>Contact</Text>
+            <Text fontSize={"large"}>Contact</Text>
           </Button>
           <Button
             onClick={() => scrollToIndex("applicationId")}
             variant={"none"}
-            padding={9}
             hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"3xl"}>Jobs</Text>
+            <Text fontSize={"large"}>Jobs</Text>
           </Button>
           <Button
             onClick={() => onNavBtnClick("terms")}
             variant={"none"}
-            padding={9}
             hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"3xl"}>Terms and Liscenses</Text>
+            <Text fontSize={"large"}>Terms & Liscenses</Text>
           </Button>
           <Button
             variant={"none"}
-            padding={9}
             hidden={isNavButtonsHidden}
             onClick={() => onNavBtnClick("privacy")}
           >
-            <Text fontSize={"3xl"}>Pivacy Policy</Text>
+            <Text fontSize={"large"}>Pivacy & Policy</Text>
           </Button>
-          <TermsAndLiscences isHidden={isTermsHidden} />
-          <PrivacyAndPolicy isHidden={isPrivacyHidden} />
+          <Box>
+            <TermsAndLiscences isHidden={isTermsHidden} />
+            <PrivacyAndPolicy isHidden={isPrivacyHidden} />
+          </Box>
         </DrawerBody>
       </DrawerContent>
     </Drawer>

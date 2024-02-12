@@ -11,7 +11,7 @@ export default function AppFooter() {
       className="App-footer"
       display={"flex"}
       justifyContent={"space-between"}
-      paddingX={"7"}
+      paddingX={"5"}
       paddingTop={"7"}
       alignItems={"center"}
     >
@@ -32,7 +32,7 @@ export default function AppFooter() {
           </a>
         </GridItem>
         <GridItem>
-          <a href="tel:+491637874040">
+          <a href="tel:+491638862533">
             <FiPhoneCall size={"6vmin"} />
           </a>
         </GridItem>

@@ -7,8 +7,18 @@ interface TermsAndLiscencesProps {
 
 const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
   return (
-    <Box hidden={isHidden}>
-      <Text fontWeight="bold" fontSize="xl">
+    <Box
+      hidden={isHidden}
+      padding={{
+        base: "420% 1.9rem 0  1.9rem",
+        sm: "59rem 3.5rem 0  3.5rem",
+        md: "29rem 7rem 0rem 7rem",
+        lg: "19rem 10rem 0 10rem",
+        xl: "25rem 23.5rem 0 23.5rem",
+        "2xl": "10rem 31rem 0 31rem",
+      }}
+    >
+      <Text fontWeight="bold">
         Google Maps General Terms and Conditions of Work2gether UC - May 2020
       </Text>
       <section>
