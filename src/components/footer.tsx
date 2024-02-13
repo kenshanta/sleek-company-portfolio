@@ -3,6 +3,7 @@ import BrandLogo from "../logo-white.svg";
 import { FaInstagram } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
 import { FiPhoneCall } from "react-icons/fi";
+import { i18n, t } from "i18next";
 
 export default function AppFooter() {
   return (
@@ -18,7 +19,7 @@ export default function AppFooter() {
       <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
         <GridItem display={"flex"} alignItems={"center"}>
           <Text fontWeight={"bold"} fontSize={"larger"}>
-            Get in touch:
+            {t("getInTouch")}
           </Text>
         </GridItem>
         <GridItem>

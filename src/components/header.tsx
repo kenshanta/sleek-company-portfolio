@@ -2,7 +2,8 @@ import React from "react";
 import { Grid, GridItem, Text, Box } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
 import Hamburger from "../hamburgerMock.svg";
-
+import { ReactComponent as Work2GetherLogo } from "../Work2gether.svg";
+import { t } from "i18next";
 interface AppHeaderProps {
   btnRef: React.RefObject<HTMLButtonElement>;
   onOpen: () => void;
@@ -38,18 +39,14 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
       </Grid>
       <GridItem marginTop={9} textColor={"white"}>
         <GridItem>
-          <svg viewBox="0 0 1320 300">
-            <text x="50%" y="50%" dy=".35em" textAnchor="middle">
-              Work/2Gether
-            </text>
-          </svg>
+          <Work2GetherLogo />
         </GridItem>
         <GridItem
           justifyContent={"center"}
           display={"flex"}
           flexDirection={"row"}
         >
-          <Text id="firstDiv"> We rise&nbsp;</Text>
+          <Text id="firstDiv"> {t("subHeader0")}&nbsp;</Text>
           <Box
             id="secondDiv"
             justifyContent={"start"}
@@ -57,9 +54,9 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
             flexDirection={"row"}
           >
             <Text id="spanInDiv">
-              <b>by lifting</b>&nbsp;
+              <b>{t("subHeader1")}</b>&nbsp;
             </Text>
-            <Text id="spanInDivSec">others</Text>
+            <Text id="spanInDivSec">{t("subHeader2")}</Text>
           </Box>
         </GridItem>
       </GridItem>

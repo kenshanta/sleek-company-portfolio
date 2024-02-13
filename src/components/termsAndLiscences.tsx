@@ -8,14 +8,15 @@ interface TermsAndLiscencesProps {
 const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
   return (
     <Box
+      height={"45vh"}
       hidden={isHidden}
       padding={{
-        base: "420% 1.9rem 0  1.9rem",
-        sm: "59rem 3.5rem 0  3.5rem",
-        md: "29rem 7rem 0rem 7rem",
-        lg: "19rem 10rem 0 10rem",
-        xl: "25rem 23.5rem 0 23.5rem",
-        "2xl": "10rem 31rem 0 31rem",
+        base: "10% 1.9rem 0  1.9rem",
+        sm: "2rem 3.5rem 0  3.5rem",
+        md: "2rem 7rem 0rem 7rem",
+        lg: "2rem 10rem 0 10rem",
+        xl: "2rem 23.5rem 0 23.5rem",
+        "2xl": "2rem 31rem 0 31rem",
       }}
     >
       <Text fontWeight="bold">
@@ -126,14 +127,27 @@ const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
           </li>
           <li>
             <Text>
-              Compliance with maximum duration of transfer is monitored, with
-              provisions for adjustment of hourly rates.
+              Obligation to Cooperate and Authority of the Client The AG must
+              provide necessary permits and cooperate in providing relevant
+              information. Instructions to temporary workers fall within the
+              AG's authority. Obligations of the Client The AG must ensure a
+              safe working environment and comply with applicable regulations.
+              Provision of gender-separate sanitary facilities and access for FW
+              is required. Obligations of Work2gether Employees provided are
+              selected according to AG's requirements, with replacements
+              available if necessary.
             </Text>
           </li>
           <li>
             <Text>
-              The AG must ensure adherence to maximum release periods and inform
-              FW of any impending industrial actions.
+              laws. FW employees are bound by confidentiality agreements.
+              Cancellation Policy Fees for personnel order cancellation depend
+              on the timing of cancellation. Liability of Work2gether and Client
+              FW is liable for proper selection and provision of temporary
+              workers. The AG is liable for damages resulting from incomplete or
+              incorrect information provided. Place of Jurisdiction and
+              Applicable Law Disputes are subject to the jurisdiction of Berlin,
+              and contracts are governed by German law.
             </Text>
           </li>
         </ul>

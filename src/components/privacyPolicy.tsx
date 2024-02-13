@@ -7,21 +7,22 @@ const PrivacyAndPolicy: React.FC<PrivacyAndPolicyProps> = ({ isHidden }) => {
   return (
     <Box
       hidden={isHidden}
+      height={"45vh"}
       padding={{
-        base: "49% 1.9rem 0  1.9rem",
-        sm: "35rem 3.5rem 0  3.5rem",
-        md: "10rem 7rem 0rem 7rem",
-        lg: "6rem 10rem 0 10rem",
-        xl: "15rem 23.5rem 0 23.5rem",
-        "2xl": "6rem 31rem 0 31rem",
+        base: "40% 1.9rem 0  1.9rem",
+        // sm: "18rem 3.5rem 0  3.5rem",
+        // md: "29rem 7rem 0rem 7rem",
+        // lg: "30rem 10rem 0 10rem",
+        // xl: "rem 23.5rem 0 23.5rem",
+        "2xl": "3rem 31rem 0 31rem",
       }}
+      paddingTop={9}
     >
-      <Text fontWeight="bold">
-        Google Maps General <b>Privacy and Policy</b> of Work2gether UC - May
-        2024
-      </Text>
-
       <section>
+        <Text fontWeight="bold">
+          Google Maps General <b>Privacy and Policy</b> of Work2gether UC - May
+          2024
+        </Text>
         <Text fontWeight="bold">Scope and Reservation of Changes</Text>
         <ul>
           <li>
@@ -78,14 +79,61 @@ const PrivacyAndPolicy: React.FC<PrivacyAndPolicyProps> = ({ isHidden }) => {
         <ul>
           <li>
             <Text>
-              Minimum operating times are specified for different staff
-              categories.
+              laws. FW employees are bound by confidentiality agreements.
+              Cancellation Policy Fees for personnel order cancellation depend
+              on the timing of cancellation. Liability of Work2gether and Client
+              FW is liable for proper selection and provision of temporary
+              workers. The AG is liable for damages resulting from incomplete or
+              incorrect information provided. Place of Jurisdiction and
+              Applicable Law Disputes are subject to the jurisdiction of Berlin,
+              and contracts are governed by German law.
             </Text>
           </li>
           <li>
             <Text>
-              Billing is based on actual hours worked, with quarterly invoicing
-              and surcharges for public holidays.
+              laws. FW employees are bound by confidentiality agreements.
+              Cancellation Policy Fees for personnel order cancellation depend
+              on the timing of cancellation. Liability of Work2gether and Client
+              FW is liable for proper selection and provision of temporary
+              workers. The AG is liable for damages resulting from incomplete or
+              incorrect information provided. Place of Jurisdiction and
+              Applicable Law Disputes are subject to the jurisdiction of Berlin,
+              and contracts are governed by German law.
+            </Text>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <Text fontWeight="bold">Scope and Reservation of Changes</Text>
+        <ul>
+          <li>
+            <Text>
+              These general terms and conditions (AGB) apply to every legal
+              transaction between work2gether (FW) and the client (AG).
+            </Text>
+          </li>
+          <li>
+            <Text>
+              laws. FW employees are bound by confidentiality agreements.
+              Cancellation Policy Fees for personnel order cancellation depend
+              on the timing of cancellation. Liability of Work2gether and Client
+              FW is liable for proper selection and provision of temporary
+              workers. The AG is liable for damages resulting from incomplete or
+              incorrect information provided. Place of Jurisdiction and
+              Applicable Law Disputes are subject to the jurisdiction of Berlin,
+              and contracts are governed by German law.
+            </Text>
+          </li>
+          <li>
+            <Text>
+              laws. FW employees are bound by confidentiality agreements.
+              Cancellation Policy Fees for personnel order cancellation depend
+              on the timing of cancellation. Liability of Work2gether and Client
+              FW is liable for proper selection and provision of temporary
+              workers. The AG is liable for damages resulting from incomplete or
+              incorrect information provided. Place of Jurisdiction and
+              Applicable Law Disputes are subject to the jurisdiction of Berlin,
+              and contracts are governed by German law.
             </Text>
           </li>
         </ul>

@@ -14,6 +14,8 @@ import BrandWhiteLogo from "../logo-white.svg";
 import TermsAndLiscences from "./termsAndLiscences";
 import PrivacyAndPolicy from "./privacyPolicy";
 import { VscChromeClose } from "react-icons/vsc";
+// TODO: check if needed
+import { useTranslation } from "react-i18next";
 
 interface CustomDrawerProps {
   isOpen: boolean;
@@ -25,15 +27,19 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
   onClose,
   btnRef,
 }) => {
+  const { t, i18n } = useTranslation();
   const [isTermsHidden, setIsTermsHidden] = React.useState(true);
   const [isPrivacyHidden, setIsPrivacyHidden] = React.useState(true);
   const [isNavButtonsHidden, setIsNavButtonsHidden] = React.useState(false);
   const [currentNav, setCurrentNav] = React.useState("");
+
   const scrollToIndex = (id: string) => {
     const divElement = document.getElementById(id);
     onClose();
     divElement?.scrollIntoView({ behavior: "smooth" });
   };
+  console.log(i18n.language, "primary language-------------------");
+
   const onNavBtnClick = (id: string) => {
     setIsNavButtonsHidden(true);
 
@@ -50,6 +56,14 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     setIsTermsHidden(true);
     setIsPrivacyHidden(true);
     setCurrentNav("");
+  };
+  const onLangChange = () => {
+    if (i18n.language === "en") {
+      i18n.changeLanguage("de");
+    } else {
+      i18n.changeLanguage("en");
+    }
+    onClose();
   };
   return (
     <Drawer
@@ -101,6 +115,17 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
           paddingBottom={9}
         >
           <Button
+            // TODO: implement next
+            onClick={() => onLangChange()}
+            variant={"none"}
+            hidden={isNavButtonsHidden}
+            width={"fit-content"}
+          >
+            <Text fontSize={"large"}>
+              {i18n.language === "en" ? "Deutsch" : "English"}
+            </Text>
+          </Button>
+          <Button
             onClick={() => scrollToIndex("componentToScrollTo")}
             variant={"none"}
             hidden={isNavButtonsHidden}
@@ -129,10 +154,8 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
           >
             <Text fontSize={"large"}>Pivacy & Policy</Text>
           </Button>
-          <Box>
-            <TermsAndLiscences isHidden={isTermsHidden} />
-            <PrivacyAndPolicy isHidden={isPrivacyHidden} />
-          </Box>
+          <TermsAndLiscences isHidden={isTermsHidden} />
+          <PrivacyAndPolicy isHidden={isPrivacyHidden} />
         </DrawerBody>
       </DrawerContent>
     </Drawer>

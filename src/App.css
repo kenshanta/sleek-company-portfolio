@@ -3,13 +3,16 @@
   src: local("Protest"), url(./fonts/ProtestStrike-Regular.ttf),
     format("truetype");
 }
-
+@font-face {
+  font-family: "coolvetica";
+  src: local("coolvetica"), url(./fonts/coolvetica-rg.otf), format("truetype");
+}
 .App {
   background-color: black;
   text-align: center;
   height: 100%;
   width: 100%;
-  font-family: "Protest";
+  font-family: "coolvetica";
 }
 
 .App-logo {
@@ -64,7 +67,7 @@
 }
 
 .Menu-drawer {
-  font-family: "Protest";
+  font-family: "coolvetica";
   background-color: black !important;
   color: white !important;
   /* height: 10rem !important; */
@@ -80,7 +83,15 @@
   height: 100%;
 } */
 svg text {
-  font-family: "Protest";
+  font-family: "coolvetica";
+  animation: stroke 5s forwards alternate;
+  stroke-width: 90px;
+  stroke: white;
+  font-size: 9.5rem;
+  letter-spacing: 0.4rem;
+}
+svg defs {
+  font-family: "coolvetica";
   text-transform: uppercase;
   animation: stroke 5s forwards alternate;
   stroke-width: 90px;
@@ -153,13 +164,14 @@ svg text {
   }
   20% {
     opacity: 1;
-    width: 0px;
+    width: auto;
   }
   30% {
     width: auto;
   }
   80% {
     opacity: 1;
+    width: auto;
   }
   100% {
     opacity: 1;
@@ -169,10 +181,10 @@ svg text {
 
 @keyframes slidein {
   0% {
-    margin-left: -2900px;
+    margin-left: -3900px;
   }
   20% {
-    margin-left: -2900px;
+    margin-left: -3900px;
   }
   25% {
     margin-left: 0px;
