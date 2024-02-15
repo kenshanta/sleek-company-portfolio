@@ -3,16 +3,16 @@
   src: local("Protest"), url(./fonts/ProtestStrike-Regular.ttf),
     format("truetype");
 }
-@font-face {
+/* @font-face {
   font-family: "coolvetica";
   src: local("coolvetica"), url(./fonts/coolvetica-rg.otf), format("truetype");
-}
+} */
 .App {
   background-color: black;
   text-align: center;
   height: 100%;
   width: 100%;
-  font-family: "coolvetica";
+  font-family: "Protest";
 }
 
 .App-logo {
@@ -67,7 +67,7 @@
 }
 
 .Menu-drawer {
-  font-family: "coolvetica";
+  font-family: "Protest";
   background-color: black !important;
   color: white !important;
   /* height: 10rem !important; */
@@ -83,15 +83,15 @@
   height: 100%;
 } */
 svg text {
-  font-family: "coolvetica";
-  animation: stroke 5s forwards alternate;
+  font-family: "Protest";
+  animation: stroke 3.5s forwards alternate;
   stroke-width: 90px;
   stroke: white;
   font-size: 9.5rem;
   letter-spacing: 0.4rem;
 }
 svg defs {
-  font-family: "coolvetica";
+  font-family: "Protest";
   text-transform: uppercase;
   animation: stroke 5s forwards alternate;
   stroke-width: 90px;
@@ -102,15 +102,15 @@ svg defs {
   0% {
     fill: rgba(72, 138, 20, 0);
     stroke: white;
-    stroke-dashoffset: 25%;
-    stroke-dasharray: 0 50%;
+    stroke-dashoffset: 55%;
+    stroke-dasharray: 5% 35%;
     stroke-width: 2;
   }
-  70% {
+  90% {
     fill: rgba(72, 138, 20, 0);
     stroke: white;
   }
-  80% {
+  95% {
     fill: rgba(72, 138, 20, 0);
     stroke: white;
     stroke-width: 3;
@@ -125,21 +125,21 @@ svg defs {
 }
 
 #firstDiv {
-  animation: showup 19s forwards;
+  animation: showup 15s forwards;
   font-size: 4vw;
 }
 
 #secondDiv {
   /* width: 0px; */
-  animation: reveal 25s forwards;
+  animation: reveal 16s forwards;
 }
 
 #spanInDiv {
-  animation: slidein 25s forwards;
+  animation: slidein 17s forwards;
   font-size: 4vw;
 }
 #spanInDivSec {
-  animation: showup 30s forwards;
+  animation: showup 20s forwards;
   font-size: 4vw;
 }
 @keyframes showup {

@@ -38,7 +38,6 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     onClose();
     divElement?.scrollIntoView({ behavior: "smooth" });
   };
-  console.log(i18n.language, "primary language-------------------");
 
   const onNavBtnClick = (id: string) => {
     setIsNavButtonsHidden(true);
