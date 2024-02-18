@@ -27,7 +27,7 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
   onClose,
   btnRef,
 }) => {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const [isTermsHidden, setIsTermsHidden] = React.useState(true);
   const [isPrivacyHidden, setIsPrivacyHidden] = React.useState(true);
   const [isNavButtonsHidden, setIsNavButtonsHidden] = React.useState(false);
@@ -131,13 +131,6 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
             width={"fit-content"}
           >
             <Text fontSize={"large"}>Contact</Text>
-          </Button>
-          <Button
-            onClick={() => scrollToIndex("applicationId")}
-            variant={"none"}
-            hidden={isNavButtonsHidden}
-          >
-            <Text fontSize={"large"}>Jobs</Text>
           </Button>
           <Button
             onClick={() => onNavBtnClick("terms")}

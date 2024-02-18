@@ -6,15 +6,15 @@ import {
   FormLabel,
   FormHelperText,
   Input,
-  InputGroup,
-  InputLeftAddon,
   Button,
   Select,
+  Collapse,
 } from "@chakra-ui/react";
 import { Avatar } from "@chakra-ui/react";
 import logo from "../profile.jpeg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
 interface AppBodyProps {
@@ -25,7 +25,10 @@ interface AppBodyProps {
 const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
   const [status, setStatus] = React.useState("Submit");
   const { t } = useTranslation();
+  const [showCeo, setShowCeo] = React.useState(false);
+  const [showCompany, setShowCompany] = React.useState(false);
   const [isSubmitDisabled, setIsSubmitDisabled] = React.useState(false);
+
   const handleSubmit = async (e: any) => {
     setIsSubmitDisabled(false);
 
@@ -69,10 +72,21 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           {t("whoWeAre")}
         </Text>
       </GridItem>
-      <Text fontSize={"sm"} paddingBottom={9}>
-        &nbsp; {t("companyIntro")}
-        <br />
-        &nbsp; {t("companySecondaryIntro")}
+      <Text fontWeight={"100"} fontSize={"sm"} paddingBottom={9}>
+        <Collapse animateOpacity={true} startingHeight={90} in={showCompany}>
+          &nbsp; {t("companyIntro")}
+          <br />
+          &nbsp; {t("companySecondaryIntro")}
+        </Collapse>
+        <Button
+          variant={"none"}
+          size="sm"
+          onClick={() => setShowCompany(!showCompany)}
+          mt="1rem"
+        >
+          Show {showCompany ? "Less " : "More "}&nbsp;
+          {showCompany ? <FaChevronUp /> : <FaChevronDown />}
+        </Button>
       </Text>
       <GridItem paddingY={9}>
         <Text fontSize={"3xl"} textDecoration={"underline"}>
@@ -88,18 +102,29 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           paddingY={5}
         >
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
-          <Text>Sevag Mkhitarian</Text>
+          <Text>Sarkis Kovlekjian</Text>
         </GridItem>
-        <Text>
+        <Collapse in={showCeo} startingHeight={90} color="white">
+          {/* <Text> */}
           {t("ceoIntro")}
           <i>We rise by lifting others.</i>
-        </Text>
+          {/* </Text> */}
+        </Collapse>
+        <Button
+          variant={"none"}
+          size="sm"
+          onClick={() => setShowCeo(!showCeo)}
+          mt="1rem"
+        >
+          Show {showCeo ? "Less " : "More "}&nbsp;
+          {showCeo ? <FaChevronUp /> : <FaChevronDown />}
+        </Button>
       </GridItem>
       <GridItem paddingTop={9}>
         <Text fontSize={"3xl"} textDecoration={"underline"}>
           {t("applyToTeam")}
         </Text>
-        <Text paddingTop={3}>{t("studentBanner")}</Text>
+        {/* <Text paddingTop={3}>{t("studentBanner")}</Text> */}
         <Text paddingTop={9} textColor={"#800002"} textStyle={"italic"}>
           {t("formInfo")}
         </Text>
@@ -119,7 +144,8 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
               <Text textColor={"#800002"}>*</Text>
             </FormLabel>
             <Input required id="email" type="email" />
-            <FormLabel
+            {/* TODO: Clean if uneeded (1month post-comment)
+             <FormLabel
               display={"flex"}
               flexDirection={"row"}
               paddingTop={2}
@@ -146,17 +172,17 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
                 type="number"
                 placeholder={t("formPhoneNum")}
               />
-            </InputGroup>
+            </InputGroup>*/}
             <FormLabel
               display={"flex"}
               flexDirection={"row"}
               paddingTop={2}
-              id="availability"
+              id="Reason"
             >
               {t("formAvailability")}&nbsp;
               <Text textColor={"#800002"}>*</Text>
             </FormLabel>
-            <Select id="availability" required>
+            <Select id="reason" required>
               <option value="option0" hidden>
                 {t("formPlaceholder")}
               </option>

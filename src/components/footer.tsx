@@ -1,9 +1,8 @@
 import { GridItem, Text } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
-import { FaInstagram } from "react-icons/fa6";
+import { FaInstagram, FaGithub } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
-import { FiPhoneCall } from "react-icons/fi";
-import { i18n, t } from "i18next";
+import { t } from "i18next";
 
 export default function AppFooter() {
   return (
@@ -33,8 +32,8 @@ export default function AppFooter() {
           </a>
         </GridItem>
         <GridItem>
-          <a href="tel:+491638862533">
-            <FiPhoneCall size={"6vmin"} />
+          <a href="https://github.com/kenshanta">
+            <FaGithub size={"6vmin"} />
           </a>
         </GridItem>
       </GridItem>
