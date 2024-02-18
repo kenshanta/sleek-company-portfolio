@@ -22,12 +22,12 @@ export default function AppFooter() {
           </Text>
         </GridItem>
         <GridItem>
-          <a href="https://www.instagram.com/worktwogether/">
+          <a href="https://www.instagram.com/kovlekjian/">
             <FaInstagram size={"6vmin"} />
           </a>
         </GridItem>
         <GridItem>
-          <a href="mailto:user@domain.com?Subject=Hello%20User">
+          <a href="mailto:sako.orange@gmail.com?Subject=Hello%20User">
             <MdAlternateEmail size={"6vmin"} />
           </a>
         </GridItem>

@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Whats the fuss about?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This ReactJs based project is a basic portfolio based template design that uses plain CSS for animations and TS for type checking
 
-## Available Scripts
+## Credits:
 
-In the project directory, you can run:
+Loosely based on the Community provided [Figma design](<https://www.figma.com/file/uqbNkKJbK99vpc6QUJPpSm/Portfolio-Full-Website-design-(Community)?type=design&node-id=0-1&mode=design&t=t0mtDsIQyhD30F4T-0>)
+Work2gether™ Berlin, Germany
 
 ### `npm start`
 
