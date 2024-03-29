@@ -1,15 +1,10 @@
-# 🤔 Whats the fuss about?
+## 🤔 Whats the fuss about?
 
 This ReactJs based project is a basic portfolio based template design that uses plain CSS for animations and TS for type checking
 
 Feel free to check it out and use it via cloning the repo locally.
 
 - If you find this project useful please don't forget to provide Credits to the author. Appreciated :)
-
-## 🪙 Credits:
-
-- Loosely based on the Community provided [Figma design](<https://www.figma.com/file/uqbNkKJbK99vpc6QUJPpSm/Portfolio-Full-Website-design-(Community)?type=design&node-id=0-1&mode=design&t=t0mtDsIQyhD30F4T-0>)
-- Work2gether™ Berlin, Germany
 
 ## 💺 Get Started:
 
@@ -45,6 +40,12 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## 🪙 Credits:
+
+- Loosely based on the Community provided [Figma design](<https://www.figma.com/file/uqbNkKJbK99vpc6QUJPpSm/Portfolio-Full-Website-design-(Community)?type=design&node-id=0-1&mode=design&t=t0mtDsIQyhD30F4T-0>)
+- Work2gether™ Berlin, Germany
+
 
 ## Learn More
 
