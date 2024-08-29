@@ -1,4 +1,4 @@
-import { GridItem, Text } from "@chakra-ui/react";
+import { GridItem, Image, Text } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
 import { FaInstagram, FaGithub } from "react-icons/fa6";
 import { MdAlternateEmail } from "react-icons/md";
@@ -12,8 +12,8 @@ export default function AppFooter() {
       display={"flex"}
       justifyContent={"space-between"}
       paddingX={"5"}
-      paddingTop={"7"}
-      alignItems={"center"}
+      marginTop={"7"}
+      alignItems={"start"}
     >
       <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
         <GridItem display={"flex"} alignItems={"center"}>
@@ -37,9 +37,8 @@ export default function AppFooter() {
           </a>
         </GridItem>
       </GridItem>
-      <GridItem>
-        <img src={BrandLogo} className="App-logo" alt="logo" />
-      </GridItem>
+
+      <Image src={BrandLogo} className="App-logo" alt="logo" />
     </GridItem>
   );
 }
