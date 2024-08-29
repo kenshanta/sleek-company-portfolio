@@ -1,8 +1,9 @@
 import React from "react";
 import { Grid, GridItem, Text, Box, Image } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
-import { ReactComponent as Work2GetherLogo } from "../Work2gether.svg";
+import Work2GetherLogo from "../Work2gether.svg?react";
 import { t } from "i18next";
+
 interface AppHeaderProps {
   btnRef: React.RefObject<HTMLButtonElement>;
   onOpen: () => void;
@@ -30,7 +31,6 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
           colEnd={6}
           onClick={() => clicked()}
           alignItems={"start"}
-          // paddingTop={4}
         >
           <input id="checkbox" type="checkbox"></input>
           <label className="toggle" htmlFor="checkbox">

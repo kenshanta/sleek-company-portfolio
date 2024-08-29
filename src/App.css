@@ -13,7 +13,7 @@
 }
 
 .App-logo {
-  width: 12vmin;
+  width: 15vmin;
   pointer-events: none;
   position: relative;
   padding: 0;
@@ -55,7 +55,7 @@
 }
 
 .Menu-drawer-logo {
-  max-height: 19vmin;
+  min-width: 12vmin;
 }
 
 svg text {
