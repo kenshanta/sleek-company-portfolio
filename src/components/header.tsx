@@ -1,7 +1,6 @@
 import React from "react";
-import { Grid, GridItem, Text, Box } from "@chakra-ui/react";
+import { Grid, GridItem, Text, Box, Image } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
-import Hamburger from "../hamburgerMock.svg";
 import { ReactComponent as Work2GetherLogo } from "../Work2gether.svg";
 import { t } from "i18next";
 interface AppHeaderProps {
@@ -22,19 +21,23 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
         paddingRight={"3"}
         paddingTop={"5"}
         backgroundColor={"black"}
-        marginBottom={9}
       >
-        <GridItem colStart={0}>
-          <img src={BrandLogo} className="App-logo" alt="logo" />
-        </GridItem>
+        <Image src={BrandLogo} className="App-logo" alt="logo" />
+
         <GridItem
-          marginBottom={9}
+          marginBottom={6}
           display={"flex"}
           colEnd={6}
           onClick={() => clicked()}
-          alignItems={"center"}
+          alignItems={"start"}
+          // paddingTop={4}
         >
-          <img src={Hamburger} className="hamburger-logo" alt="hamburger" />
+          <input id="checkbox" type="checkbox"></input>
+          <label className="toggle" htmlFor="checkbox">
+            <div id="bar1" className="bars"></div>
+            <div id="bar2" className="bars"></div>
+            <div id="bar3" className="bars"></div>
+          </label>
         </GridItem>
       </Grid>
       <GridItem marginTop={9} textColor={"white"}>
