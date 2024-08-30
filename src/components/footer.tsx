@@ -11,8 +11,8 @@ export default function AppFooter() {
       className="App-footer"
       display={"flex"}
       justifyContent={"space-between"}
-      paddingX={"5"}
-      marginY={"7"}
+      padding={"3"}
+
       alignItems={"center"}
     >
       <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>

@@ -9,6 +9,7 @@ interface AppHeaderProps {
   onOpen: () => void;
   clicked: () => void;
 }
+
 const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
   return (
     <>
@@ -22,6 +23,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
         paddingRight={"3"}
         paddingTop={"5"}
         backgroundColor={"black"}
+        zIndex={1}
       >
         <Image src={BrandLogo} className="App-logo" alt="logo" />
         <GridItem

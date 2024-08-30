@@ -1,4 +1,5 @@
 import { useRouteError } from "react-router-dom";
+import { Text } from "@chakra-ui/react";
 
 export default function ErrorPage() {
   const error: any = useRouteError();
@@ -7,10 +8,8 @@ export default function ErrorPage() {
   return (
     <div id="error-page">
       <h1>Oops!</h1>
-      <p>Sorry, an unexpected error has occurred.</p>
-      <p>
-        <i>{error.statusText || error.message}</i>
-      </p>
+      <Text>Sorry, an unexpected error has occurred. &nsbps; {error.statusText || error.message}
+      </Text>
     </div>
   );
 }
