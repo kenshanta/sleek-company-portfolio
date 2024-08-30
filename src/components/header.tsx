@@ -24,13 +24,12 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
         backgroundColor={"black"}
       >
         <Image src={BrandLogo} className="App-logo" alt="logo" />
-
         <GridItem
           marginBottom={6}
           display={"flex"}
           colEnd={6}
           onClick={() => clicked()}
-          alignItems={"start"}
+          alignItems={"center"}
         >
           <input id="checkbox" type="checkbox"></input>
           <label className="toggle" htmlFor="checkbox">

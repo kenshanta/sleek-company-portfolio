@@ -14,7 +14,6 @@ import BrandWhiteLogo from "../logo-white.svg";
 import TermsAndLiscences from "./termsAndLiscences";
 import PrivacyAndPolicy from "./privacyPolicy";
 import { VscChromeClose } from "react-icons/vsc";
-// TODO: check if needed
 import { useTranslation } from "react-i18next";
 
 interface CustomDrawerProps {
@@ -94,15 +93,6 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
             <Text fontSize={"2xl"}>{currentNav}</Text>
           </Box>
         </DrawerHeader>
-        <Button
-          variant={"none"}
-          alignContent={"center"}
-          justifyContent={"start"}
-          visibility={isNavButtonsHidden ? "initial" : "hidden"}
-          onClick={() => onCloseSubNavMenu()}
-        >
-          <VscChromeClose /> &nbsp;Close Me
-        </Button>
 
         <DrawerBody
           display={"flex"}
@@ -112,9 +102,9 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
           alignItems={"center"}
           gap={10}
           paddingBottom={9}
+          className="Menu-drawer-body"
         >
           <Button
-            // TODO: implement next
             onClick={() => onLangChange()}
             variant={"none"}
             hidden={isNavButtonsHidden}

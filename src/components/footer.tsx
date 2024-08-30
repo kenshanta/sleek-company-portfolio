@@ -12,8 +12,8 @@ export default function AppFooter() {
       display={"flex"}
       justifyContent={"space-between"}
       paddingX={"5"}
-      marginTop={"7"}
-      alignItems={"start"}
+      marginY={"7"}
+      alignItems={"center"}
     >
       <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
         <GridItem display={"flex"} alignItems={"center"}>

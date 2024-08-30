@@ -27,16 +27,21 @@
   padding: 30px 20px;
 }
 
+.App-body {
+  background-color: rgb(11, 11, 11);
+  color: white;
+  margin-top: 3rem;
+}
+
 .App-footer {
   color: white;
   background-color: black;
   padding-top: 3rem;
 }
-
-.App-body {
-  background-color: rgb(11, 11, 11);
+.App-footer {
   color: white;
-  margin-top: 9rem;
+  background-color: black;
+  padding-top: 3rem;
 }
 
 .App-link {
@@ -62,7 +67,7 @@ svg text {
   font-family: "Protest";
   animation: stroke 3.5s forwards alternate;
   stroke-width: 90px;
-  stroke: white;
+  stroke: green;
   font-size: 9.5rem;
   letter-spacing: 0.4rem;
 }
@@ -229,4 +234,59 @@ svg defs {
 
 #checkbox:checked + .toggle {
   transform: rotate(-90deg);
+}
+
+@media screen and (prefers-color-scheme: light) {
+  .App-body {
+    background-color: white;
+    color: black;
+  }
+  p {
+    color: black;
+  }
+  .chakra-button {
+    color: black;
+  }
+  .App {
+    background-color: white;
+    color: black;
+  }
+  svg text {
+    stroke: black;
+  }
+  svg defs {
+    stroke: black;
+  }
+
+  @keyframes stroke {
+    0% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: black;
+      stroke-dashoffset: 55%;
+      stroke-dasharray: 5% 35%;
+      stroke-width: 2;
+    }
+
+    90% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: black;
+    }
+
+    95% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: black;
+      stroke-width: 1;
+    }
+
+    100% {
+      fill: rgba(72, 138, 20, 0);
+      stroke: black;
+      stroke-dashoffset: -25%;
+      stroke-dasharray: 50% 0;
+      stroke-width: 7;
+    }
+  }
+  .Menu-drawer-body {
+    background-color: white;
+  }
 }
