@@ -144,35 +144,6 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
               <Text textColor={"#800002"}>*</Text>
             </FormLabel>
             <Input required id="email" type="email" />
-            {/* TODO: Clean if uneeded (1month post-comment)
-             <FormLabel
-              display={"flex"}
-              flexDirection={"row"}
-              paddingTop={2}
-              id="birthday"
-            >
-              {t("formDateOfBirth")}&nbsp;
-              <Text textColor={"#800002"}>*</Text>
-            </FormLabel>
-            <Input required id="birthday" type="date" />
-            <FormLabel
-              display={"flex"}
-              flexDirection={"row"}
-              paddingTop={2}
-              id="phoneNumber"
-            >
-              {t("formPhoneNum")}&nbsp;
-              <Text textColor={"#800002"}>*</Text>
-            </FormLabel>
-            <InputGroup>
-              <InputLeftAddon>+49</InputLeftAddon>
-              <Input
-                required
-                id="phoneNumber"
-                type="number"
-                placeholder={t("formPhoneNum")}
-              />
-            </InputGroup>*/}
             <FormLabel
               display={"flex"}
               flexDirection={"row"}
@@ -193,7 +164,7 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
 
             <FormHelperText>{t("formConsent")}</FormHelperText>
           </FormControl>
-          <Button isDisabled={isSubmitDisabled} type="submit">
+          <Button id='submitt' isDisabled={isSubmitDisabled} type="submit">
             {status}
           </Button>
         </form>

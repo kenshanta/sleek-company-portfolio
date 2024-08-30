@@ -10,14 +10,10 @@ export default function HomePage() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
 
-  // TODO: Clean up after testing click issue
-  const clicked = () => {
-    onOpen();
-  };
   return (
     <Grid className="App" gap={9}>
       <HamburgerDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-      <AppHeader btnRef={btnRef} onOpen={onOpen} clicked={clicked} />
+      <AppHeader btnRef={btnRef} onOpen={onOpen} clicked={() => onOpen()} />
       <AppBody isOpen={isOpen} btnRef={btnRef} onClose={onClose} />
       <AppFooter />
     </Grid>
