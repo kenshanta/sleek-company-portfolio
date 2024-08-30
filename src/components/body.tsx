@@ -8,6 +8,7 @@ import {
   Input,
   Button,
   Select,
+  Box,
   Collapse,
 } from "@chakra-ui/react";
 import { Avatar } from "@chakra-ui/react";
@@ -17,12 +18,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 
-interface AppBodyProps {
-  btnRef: React.RefObject<HTMLButtonElement>;
-  isOpen: boolean;
-  onClose: () => void;
-}
-const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
+interface AppBodyProps {}
+const AppBody: React.FC<AppBodyProps> = () => {
   const [status, setStatus] = React.useState("Submit");
   const { t } = useTranslation();
   const [showCeo, setShowCeo] = React.useState(false);
@@ -36,33 +33,17 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
     e.preventDefault();
     setStatus("Sending...");
     toast.warning("Form under construction", { position: "top-center" });
-    // TODO: Backend under construction to be built a by buyi ng a server
-    // const { fullName, email, phoneNumber, birthday } = e.target.elements;
-    // let details = {
-    //   fullName: fullName.value,
-    //   email: email.value,
-    //   phoneNumber: phoneNumber.value,
-    //   birthday: birthday.value,
-    // };
-    // let response = await fetch("http://localhost:8080/form", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json; charset=utf-8",
-    //   },
-    //   body: JSON.stringify(details),
-    // });
     setStatus("Submit");
-    // toast.success("submitted");
   };
   return (
     <GridItem
       className="App-body"
       padding={{
-        base: "0 2.5rem 0  2.5rem",
-        sm: "0 3.5rem 0  3.5rem",
+        base: "2.5rem",
+        sm: "3.5rem",
         md: "0 7rem 0rem 7rem",
-        lg: "0 10rem 0 10rem",
-        xl: "0 19.5rem 0 19.5rem",
+        lg: "7rem 10rem 7rem 10rem",
+        xl: "10rem 19.5rem 10rem 19.5rem",
         "2xl": "0 29rem 0 29rem",
       }}
     >
@@ -72,7 +53,7 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           {t("whoWeAre")}
         </Text>
       </GridItem>
-      <Text fontWeight={"100"} fontSize={"sm"} paddingBottom={9}>
+      <Box fontWeight={"100"} fontSize={"sm"} paddingBottom={9}>
         <Collapse animateOpacity={true} startingHeight={90} in={showCompany}>
           &nbsp; {t("companyIntro")}
           <br />
@@ -87,13 +68,13 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           Show {showCompany ? "Less " : "More "}&nbsp;
           {showCompany ? <FaChevronUp /> : <FaChevronDown />}
         </Button>
-      </Text>
+      </Box>
       <GridItem paddingY={9}>
         <Text fontSize={"3xl"} textDecoration={"underline"}>
           {t("aboutTheTeam")}
         </Text>
         <GridItem
-          gap={3}
+          // gap={3}
           alignItems={"center"}
           display={"flex"}
           flexDirection={"row"}
@@ -104,11 +85,8 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
           <Text>Sarkis Kovlekjian</Text>
         </GridItem>
-        <Collapse in={showCeo} startingHeight={90} color="white">
-          {/* <Text> */}
+        <Collapse in={showCeo} startingHeight={90}>
           {t("ceoIntro")}
-          <i>We rise by lifting others.</i>
-          {/* </Text> */}
         </Collapse>
         <Button
           variant={"none"}
@@ -124,13 +102,16 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
         <Text fontSize={"3xl"} textDecoration={"underline"}>
           {t("applyToTeam")}
         </Text>
-        {/* <Text paddingTop={3}>{t("studentBanner")}</Text> */}
         <Text paddingTop={9} textColor={"#800002"} textStyle={"italic"}>
           {t("formInfo")}
         </Text>
         <form id="applicationId" onSubmit={handleSubmit}>
           <FormControl padding={8}>
-            <FormLabel display={"flex"} flexDirection={"row"} id="fullName">
+            <FormLabel
+              display={"flex"}
+              flexDirection={"row"}
+              htmlFor="fullName"
+            >
               {t("formFullName")}&nbsp; <Text textColor={"#800002"}>*</Text>
             </FormLabel>
             <Input required id="fullName" />
@@ -138,17 +119,17 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
               display={"flex"}
               flexDirection={"row"}
               paddingTop={2}
-              id="email"
+              htmlFor="email"
             >
               {t("formEmailAddress")}&nbsp;
               <Text textColor={"#800002"}>*</Text>
             </FormLabel>
-            <Input required id="email" type="email" />
+            <Input autoComplete="on" required id="email" type="email" />
             <FormLabel
               display={"flex"}
               flexDirection={"row"}
               paddingTop={2}
-              id="Reason"
+              htmlFor="reason"
             >
               {t("formAvailability")}&nbsp;
               <Text textColor={"#800002"}>*</Text>
@@ -164,7 +145,7 @@ const AppBody: React.FC<AppBodyProps> = ({ btnRef, isOpen, onClose }) => {
 
             <FormHelperText>{t("formConsent")}</FormHelperText>
           </FormControl>
-          <Button id='submitt' isDisabled={isSubmitDisabled} type="submit">
+          <Button id="submitt" isDisabled={isSubmitDisabled} type="submit">
             {status}
           </Button>
         </form>

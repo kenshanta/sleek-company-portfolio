@@ -19,15 +19,12 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
         templateColumns="repeat(2, 1fr)"
         position="sticky"
         top="0"
-        paddingX={"4"}
-        paddingRight={"3"}
-        paddingTop={"5"}
         backgroundColor={"black"}
         zIndex={1}
+        className="App-header"
       >
         <Image src={BrandLogo} className="App-logo" alt="logo" />
         <GridItem
-          marginBottom={6}
           display={"flex"}
           colEnd={6}
           onClick={() => clicked()}
@@ -41,10 +38,8 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
           </label>
         </GridItem>
       </Grid>
-      <GridItem marginTop={9} textColor={"white"}>
-        <GridItem>
-          <Work2GetherLogo />
-        </GridItem>
+      <GridItem textColor={"white"} padding={"10"}>
+        <Work2GetherLogo />
         <GridItem
           justifyContent={"center"}
           display={"flex"}

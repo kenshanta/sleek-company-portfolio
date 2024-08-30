@@ -11,10 +11,10 @@ export default function HomePage() {
   const btnRef = React.useRef<HTMLButtonElement>(null);
 
   return (
-    <Grid className="App" gap={9}>
+    <Grid className="App" gap={10}>
       <HamburgerDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
       <AppHeader btnRef={btnRef} onOpen={onOpen} clicked={() => onOpen()} />
-      <AppBody isOpen={isOpen} btnRef={btnRef} onClose={onClose} />
+      <AppBody />
       <AppFooter />
     </Grid>
   );
