@@ -5,10 +5,12 @@
 }
 
 .App {
-  background-color: rgb(11, 11, 11);
-  text-align: center;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, grey 0.5%, black 5%, black 100%);
+  background-size: 40px 40px;
+  animation: move 3s linear infinite;
+  text-align: center;
   font-family: "Protest";
 }
 
@@ -27,21 +29,64 @@
   padding: 30px 20px;
 }
 
-.App-body {
-  background-color: rgb(11, 11, 11);
+.App-header {
   color: white;
-  margin-top: 3rem;
+  width: 100%;
+  height: 100%;
+  padding: 0.5rem;
+  --s: 150px;
+  --c1: #4e4f51;
+  --c2: #1d1d1d;
+  --c3: #3c3c3c;
+
+  background: repeating-conic-gradient(
+        from 30deg,
+        #0000 0 120deg,
+        var(--c3) 0 180deg
+      )
+      calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+    repeating-conic-gradient(
+      from 30deg,
+      var(--c1) 0 60deg,
+      var(--c2) 0 120deg,
+      var(--c3) 0 180deg
+    );
+  background-size: var(--s) calc(var(--s) * 0.577);
 }
 
-.App-footer {
+.App-body {
   color: white;
-  background-color: black;
-  padding-top: 3rem;
+  width: 100%;
+  height: 100%;
+  background: #121212;
+  background: linear-gradient(135deg, grey 0.5%, black 5%, black 100%);
+  background-size: 40px 40px;
+  animation: move 3s linear infinite;
 }
 .App-footer {
   color: white;
-  background-color: black;
   padding-top: 3rem;
+  width: 100%;
+  height: 100%;
+  --s: 65px;
+  --c1: #4e4f51;
+  --c2: #1d1d1d;
+  --c3: #3c3c3c;
+
+  --_c: 75%, var(--c3) 52.72deg, #0000 0;
+  --_g1: conic-gradient(from -116.36deg at 25% var(--_c));
+  --_g2: conic-gradient(from 63.43deg at 75% var(--_c));
+  background: var(--_g1), var(--_g1) calc(3 * var(--s)) calc(var(--s) / 2),
+    var(--_g2), var(--_g2) calc(3 * var(--s)) calc(var(--s) / 2),
+    conic-gradient(
+      var(--c2) 63.43deg,
+      var(--c1) 0 116.36deg,
+      var(--c2) 0 180deg,
+      var(--c1) 0 243.43deg,
+      var(--c2) 0 296.15deg,
+      var(--c1) 0
+    );
+  background-size: calc(2 * var(--s)) var(--s);
 }
 
 .App-link {
@@ -116,7 +161,6 @@ svg defs {
 }
 
 #secondDiv {
-  /* width: 0px; */
   animation: reveal 16s forwards;
 }
 
@@ -192,6 +236,15 @@ svg defs {
   }
 }
 
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
+}
+
 #checkbox {
   display: none;
   justify-content: start;
@@ -238,14 +291,32 @@ svg defs {
 
 @media screen and (prefers-color-scheme: light) {
   .App-body {
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      grey 0.5%,
+      whitesmoke 5%,
+      whitesmoke 100%
+    );
+    background-size: 40px 40px;
+    animation: move 3s linear infinite;
     color: black;
   }
   p {
     color: black;
   }
   .App {
-    background-color: white;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      grey 0.5%,
+      whitesmoke 5%,
+      whitesmoke 100%
+    );
+    background-size: 40px 40px;
+    animation: move 3s linear infinite;
     color: black;
   }
   svg text {
@@ -255,9 +326,11 @@ svg defs {
     stroke: black;
   }
 
-  #fullName ,#email, #reason, #submitt{
+  #fullName,
+  #email,
+  #reason,
+  #submitt {
     border-color: black;
-    
   }
 
   @keyframes stroke {
