@@ -38,12 +38,13 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
           </label>
         </GridItem>
       </Grid>
-      <GridItem textColor={"white"} padding={"10"}>
+      <GridItem className="pp" textColor={"white"}>
         <Work2GetherLogo />
         <GridItem
           justifyContent={"center"}
           display={"flex"}
           flexDirection={"row"}
+          className="sub-header"
         >
           <Text id="firstDiv"> {t("subHeader0")}&nbsp;</Text>
           <Box

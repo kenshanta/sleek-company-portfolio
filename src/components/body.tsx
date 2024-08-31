@@ -41,7 +41,7 @@ const AppBody: React.FC<AppBodyProps> = () => {
       padding={{
         base: "2.5rem",
         sm: "3.5rem",
-        md: "0 7rem 0rem 7rem",
+        md: "4rem 7rem 4rem 7rem",
         lg: "7rem 10rem 7rem 10rem",
         xl: "10rem 19.5rem 10rem 19.5rem",
         "2xl": "0 29rem 0 29rem",
@@ -53,7 +53,7 @@ const AppBody: React.FC<AppBodyProps> = () => {
           {t("whoWeAre")}
         </Text>
       </GridItem>
-      <Box fontWeight={"100"} fontSize={"sm"} paddingBottom={9}>
+      <Box fontWeight={"100"} paddingBottom={9}>
         <Collapse animateOpacity={true} startingHeight={90} in={showCompany}>
           &nbsp; {t("companyIntro")}
           <br />
@@ -74,7 +74,6 @@ const AppBody: React.FC<AppBodyProps> = () => {
           {t("aboutTheTeam")}
         </Text>
         <GridItem
-          // gap={3}
           alignItems={"center"}
           display={"flex"}
           flexDirection={"row"}
@@ -83,7 +82,7 @@ const AppBody: React.FC<AppBodyProps> = () => {
           paddingY={5}
         >
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
-          <Text>Sarkis Kovlekjian</Text>
+          <Text paddingLeft={2}>Sarkis Kovlekjian</Text>
         </GridItem>
         <Collapse in={showCeo} startingHeight={90}>
           {t("ceoIntro")}
