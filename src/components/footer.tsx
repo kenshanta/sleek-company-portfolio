@@ -6,15 +6,7 @@ import { t } from "i18next";
 
 export default function AppFooter() {
   return (
-    <GridItem
-      id="componentToScrollTo"
-      className="App-footer"
-      display={"flex"}
-      justifyContent={"space-between"}
-      padding={"3"}
-
-      alignItems={"center"}
-    >
+    <GridItem id="componentToScrollTo" className="App-footer">
       <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
         <GridItem display={"flex"} alignItems={"center"}>
           <Text fontWeight={"bold"} fontSize={"larger"}>

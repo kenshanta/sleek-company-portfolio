@@ -13,7 +13,7 @@ export default function HomePage() {
   return (
     <Grid className="App">
       <HamburgerDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-      <AppHeader btnRef={btnRef} onOpen={onOpen} clicked={() => onOpen()} />
+      <AppHeader clicked={() => onOpen()} />
       <AppBody />
       <AppFooter />
     </Grid>
