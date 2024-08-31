@@ -11,7 +11,7 @@ export default function HomePage() {
   const btnRef = React.useRef<HTMLButtonElement>(null);
 
   return (
-    <Grid className="App" gap={10}>
+    <Grid className="App">
       <HamburgerDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
       <AppHeader btnRef={btnRef} onOpen={onOpen} clicked={() => onOpen()} />
       <AppBody />

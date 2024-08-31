@@ -67,7 +67,7 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     <Drawer
       finalFocusRef={btnRef}
       placement="top"
-      onClose={onClose}
+      onClose={onCloseSubNavMenu}
       isOpen={isOpen}
       size={"xs"}
       autoFocus={false}
