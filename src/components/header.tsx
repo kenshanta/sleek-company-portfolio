@@ -5,24 +5,13 @@ import Work2GetherLogo from "../Work2gether.svg?react";
 import { t } from "i18next";
 
 interface AppHeaderProps {
-  btnRef: React.RefObject<HTMLButtonElement>;
-  onOpen: () => void;
   clicked: () => void;
 }
 
-const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
+const AppHeader: React.FC<AppHeaderProps> = ({ clicked }) => {
   return (
     <>
-      <Grid
-        justifyContent={"space-between"}
-        flexDirection={"row"}
-        templateColumns="repeat(2, 1fr)"
-        position="sticky"
-        top="0"
-        backgroundColor={"black"}
-        zIndex={1}
-        className="App-header"
-      >
+      <Grid className="App-header">
         <Image src={BrandLogo} className="App-logo" alt="logo" />
         <GridItem
           display={"flex"}
@@ -38,7 +27,7 @@ const AppHeader: React.FC<AppHeaderProps> = ({ btnRef, onOpen, clicked }) => {
           </label>
         </GridItem>
       </Grid>
-      <GridItem className="pp" textColor={"white"}>
+      <GridItem className="Header-banner" textColor={"white"}>
         <Work2GetherLogo />
         <GridItem
           justifyContent={"center"}

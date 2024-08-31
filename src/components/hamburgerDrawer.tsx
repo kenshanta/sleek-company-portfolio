@@ -94,16 +94,7 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
           </Box>
         </DrawerHeader>
 
-        <DrawerBody
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"center"}
-          alignContent={"center"}
-          alignItems={"center"}
-          gap={10}
-          paddingBottom={9}
-          className="Menu-drawer-body"
-        >
+        <DrawerBody className="Menu-drawer-body">
           <Button
             onClick={() => onLangChange()}
             variant={"none"}

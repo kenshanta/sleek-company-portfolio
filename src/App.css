@@ -14,22 +14,20 @@
   font-family: "Protest";
 }
 
-.App-logo {
-  width: 15vmin;
-  pointer-events: none;
-  position: relative;
-  padding: 0;
-}
-
-.toast-message {
-  background: black;
-  color: #fff;
-  font-size: 20px;
-  width: 34vw;
-  padding: 30px 20px;
+.App-body {
+  color: white;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, grey 0.5%, black 5%, black 100%);
+  background-size: 40px 40px;
+  animation: move 3s linear infinite;
 }
 
 .App-header {
+  position: sticky;
+  top: 0;
+  justify-content: space-between;
+  flex-direction: row;
   color: white;
   width: 100%;
   height: 100%;
@@ -52,18 +50,14 @@
       var(--c3) 0 180deg
     );
   background-size: var(--s) calc(var(--s) * 0.577);
+  z-index: 1;
 }
 
-.App-body {
-  color: white;
-  /* width: 100%;
-  height: 100%;
-  background: #121212;
-  background: linear-gradient(135deg, grey 0.5%, black 5%, black 100%);
-  background-size: 40px 40px;
-  animation: move 3s linear infinite; */
-}
 .App-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
   color: white;
   padding-top: 3rem;
   width: 100%;
@@ -89,35 +83,34 @@
   background-size: calc(2 * var(--s)) var(--s);
 }
 
+.App-logo {
+  width: 15vmin;
+  pointer-events: none;
+  position: relative;
+  padding: 0;
+}
+
 .App-link {
   color: whitesmoke;
 }
 
-.App-logo-footer {
-  height: 7vmin;
-  background-color: black;
-}
-
-.Menu-drawer {
-  font-family: "Protest";
-  background-color: black !important;
-  color: white !important;
-}
-.pp {
+/* unused */
+.Header-banner {
   padding-top: 9rem;
 }
 
-.Menu-drawer-logo {
-  min-width: 12vmin;
+.toast-message {
+  background: black;
+  color: #fff;
+  font-size: 20px;
+  width: 34vw;
+  padding: 30px 20px;
 }
 
+/* * --------SVGs--------- * */
+
 svg text {
-  font-family: "Protest";
   animation: stroke 3.5s forwards alternate;
-  stroke-width: 90px;
-  stroke: green;
-  font-size: 9.5rem;
-  letter-spacing: 0.4rem;
 }
 
 svg defs {
@@ -128,6 +121,79 @@ svg defs {
   stroke: white;
   font-size: 9.5rem;
 }
+
+/* * ------------------------------- * */
+
+/* * --------HamburgerDrawerMenu--------- * */
+
+.Menu-drawer {
+  font-family: "Protest";
+  background-color: black !important;
+  color: white !important;
+}
+
+.Menu-drawer-body {
+  background-color: white;
+  padding-bottom: 5rem;
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.Menu-drawer-logo {
+  min-width: 12vmin;
+}
+
+#checkbox {
+  display: none;
+  justify-content: start;
+}
+
+.toggle {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition-duration: 0.3s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(253, 255, 243);
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: translateY(14px) rotate(60deg);
+  margin-left: 0;
+  transform-origin: right;
+  transition-duration: 0.3s;
+  z-index: 2;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  transform: translateY(28px) rotate(-60deg);
+  transition-duration: 0.3s;
+  transform-origin: left;
+  z-index: 1;
+}
+
+#checkbox:checked + .toggle {
+  transform: rotate(-90deg);
+}
+
+/* * --------------------------------------- * */
+
+/* * -------------Animations---------------- * */
 
 @keyframes stroke {
   0% {
@@ -248,70 +314,11 @@ svg defs {
   }
 }
 
-#checkbox {
-  display: none;
-  justify-content: start;
-}
+/* * --------------------------------- * */
 
-.toggle {
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  transition-duration: 0.3s;
-}
-
-.bars {
-  width: 100%;
-  height: 4px;
-  background-color: rgb(253, 255, 243);
-  border-radius: 5px;
-  transition-duration: 0.3s;
-}
-
-#checkbox:checked + .toggle #bar2 {
-  transform: translateY(14px) rotate(60deg);
-  margin-left: 0;
-  transform-origin: right;
-  transition-duration: 0.3s;
-  z-index: 2;
-}
-
-#checkbox:checked + .toggle #bar1 {
-  transform: translateY(28px) rotate(-60deg);
-  transition-duration: 0.3s;
-  transform-origin: left;
-  z-index: 1;
-}
-
-#checkbox:checked + .toggle {
-  transform: rotate(-90deg);
-}
+/* * -------------Theme----------------* */
 
 @media screen and (prefers-color-scheme: light) {
-  .App-body {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      135deg,
-      grey 0.5%,
-      whitesmoke 5%,
-      whitesmoke 100%
-    );
-    background-size: 40px 40px;
-    animation: move 3s linear infinite;
-    color: black;
-  }
-  .sub-header {
-    color: black;
-  }
-  .Menu-drawer-body {
-    color: black;
-  }
   .App {
     width: 100%;
     height: 100%;
@@ -325,9 +332,25 @@ svg defs {
     animation: move 3s linear infinite;
     color: black;
   }
+
+  .App-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      135deg,
+      grey 0.5%,
+      whitesmoke 5%,
+      whitesmoke 100%
+    );
+    background-size: 40px 40px;
+    animation: move 3s linear infinite;
+    color: black;
+  }
+
   svg text {
     stroke: black;
   }
+
   svg defs {
     stroke: black;
   }
@@ -337,6 +360,14 @@ svg defs {
   #reason,
   #submitt {
     border-color: black;
+  }
+
+  .sub-header {
+    color: black;
+  }
+
+  .Menu-drawer-body {
+    color: black;
   }
 
   @keyframes stroke {
@@ -368,13 +399,11 @@ svg defs {
       stroke-width: 7;
     }
   }
-  .Menu-drawer-body {
-    background-color: white;
-  }
 }
 
+/* * ---------------Media queries-------------- * */
 @media (max-width: 900px) {
-  .pp {
+  .Header-banner {
     padding: 17rem 0;
   }
 }
