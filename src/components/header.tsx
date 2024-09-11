@@ -3,24 +3,32 @@ import { Grid, GridItem, Text, Box, Image } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
 import Work2GetherLogo from "../Work2gether.svg?react";
 import { t } from "i18next";
-
+import HamburgerDrawer from "./hamburgerDrawer";
 interface AppHeaderProps {
-  clicked: () => void;
+  onOpen: () => void;
+  isOpen: boolean;
+  btnRef: React.RefObject<HTMLButtonElement>;
+
+  onClose: () => void;
 }
 
-const AppHeader: React.FC<AppHeaderProps> = ({ clicked }) => {
+const AppHeader: React.FC<AppHeaderProps> = ({
+  onOpen,
+  isOpen,
+  onClose,
+  btnRef,
+}) => {
   return (
     <>
       <Grid className="App-header">
         <Image src={BrandLogo} className="App-logo" alt="logo" />
-        <GridItem
-          display={"flex"}
-          colEnd={6}
-          onClick={() => clicked()}
-          alignItems={"center"}
-        >
+        <GridItem display={"flex"} colEnd={6} alignItems={"center"}>
           <input id="checkbox" type="checkbox"></input>
-          <label className="toggle" htmlFor="checkbox">
+          <label
+            className="toggle"
+            htmlFor="checkbox"
+            onClick={() => (isOpen ? onClose() : onOpen())}
+          >
             <div id="bar1" className="bars"></div>
             <div id="bar2" className="bars"></div>
             <div id="bar3" className="bars"></div>
