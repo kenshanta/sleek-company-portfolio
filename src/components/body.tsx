@@ -54,7 +54,7 @@ const AppBody: React.FC<AppBodyProps> = () => {
         </Text>
       </GridItem>
       <Box fontWeight={"100"} paddingBottom={9}>
-        <Collapse animateOpacity={true} startingHeight={90} in={showCompany}>
+        <Collapse animateOpacity={true} startingHeight={130} in={showCompany}>
           &nbsp; {t("companyIntro")}
           <br />
           &nbsp; {t("companySecondaryIntro")}
@@ -84,7 +84,7 @@ const AppBody: React.FC<AppBodyProps> = () => {
           <Avatar size={"md"} name="Sarkis Kovlekjian" src={logo}></Avatar>
           <Text paddingLeft={2}>Sarkis Kovlekjian</Text>
         </GridItem>
-        <Collapse in={showCeo} startingHeight={90}>
+        <Collapse in={showCeo} startingHeight={130}>
           {t("ceoIntro")}
         </Collapse>
         <Button
@@ -148,6 +148,7 @@ const AppBody: React.FC<AppBodyProps> = () => {
             {status}
           </Button>
         </form>
+        <a href="https://altcha.org">Protected by ALTCHA</a>
       </GridItem>
     </GridItem>
   );

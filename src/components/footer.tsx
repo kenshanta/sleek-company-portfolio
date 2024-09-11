@@ -7,8 +7,13 @@ import { t } from "i18next";
 export default function AppFooter() {
   return (
     <GridItem id="componentToScrollTo" className="App-footer">
-      <GridItem display={"flex"} flexDirection={"row"} gap={"4"}>
-        <GridItem display={"flex"} alignItems={"center"}>
+      <GridItem
+        display={"flex"}
+        alignItems={"center"}
+        flexDirection={"row"}
+        gap={"4"}
+      >
+        <GridItem display={"flex"}>
           <Text fontWeight={"bold"} fontSize={"larger"}>
             {t("getInTouch")}
           </Text>

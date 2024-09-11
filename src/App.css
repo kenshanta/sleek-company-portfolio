@@ -7,7 +7,7 @@
 .App {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, grey 0.5%, black 5%, black 100%);
+  background: #1d1d1d;
   background-size: 40px 40px;
   animation: move 4s linear infinite;
   text-align: center;
@@ -18,9 +18,9 @@
   color: white;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, grey 0.5%, black 5%, black 100%);
-  background-size: 40px 40px;
-  animation: move 3s linear infinite;
+  background: linear-gradient(#1d1d1d, #4e4f51, #3c3c3c);
+  /* background-size: 40px 40px; */
+  /* animation: move 3s linear infinite; */
 }
 
 .App-header {
@@ -32,7 +32,7 @@
   width: 100%;
   height: 100%;
   padding: 0.5rem;
-  --s: 150px;
+  --s: calc(100vh - 2rem);
   --c1: #4e4f51;
   --c2: #1d1d1d;
   --c3: #3c3c3c;
@@ -58,11 +58,11 @@
   justify-content: space-between;
   padding: 1rem;
   align-items: center;
+  flex-direction: row;
   color: white;
-  padding-top: 3rem;
   width: 100%;
   height: 100%;
-  --s: 65px;
+  --s: calc(100vh - 2rem);
   --c1: #4e4f51;
   --c2: #1d1d1d;
   --c3: #3c3c3c;
@@ -81,6 +81,7 @@
       var(--c1) 0
     );
   background-size: calc(2 * var(--s)) var(--s);
+  /* animation: move 1.5s infinite alternate; */
 }
 
 .App-logo {
@@ -100,7 +101,7 @@
 }
 
 .toast-message {
-  background: black;
+  background: #1d1d1d;
   color: #fff;
   font-size: 20px;
   width: 34vw;
@@ -128,12 +129,13 @@ svg defs {
 
 .Menu-drawer {
   font-family: "Protest";
-  background-color: black !important;
-  color: white !important;
+  background: linear-gradient(#3c3c3c, #4e4f51, #1d1d1d);
+  padding: 2.5rem;
 }
 
 .Menu-drawer-body {
-  background-color: white;
+  color: white !important;
+  /* background-color: white; */
   padding-bottom: 5rem;
   gap: 3rem;
   display: flex;
@@ -330,50 +332,46 @@ svg defs {
     );
     background-size: 40px 40px;
     animation: move 3s linear infinite;
-    color: black;
+    color: #1d1d1d;
   }
 
   .App-body {
     width: 100%;
     height: 100%;
-    background: linear-gradient(
-      135deg,
-      grey 0.5%,
-      whitesmoke 5%,
-      whitesmoke 100%
-    );
-    background-size: 40px 40px;
-    animation: move 3s linear infinite;
-    color: black;
+    background: linear-gradient(whitesmoke, grey);
+    /* background-size: 10rem 10rem; */
+    /* animation: move 3s linear infinite; */
+    /* background-clip: text; */
   }
 
   svg text {
-    stroke: black;
+    stroke: #1d1d1d;
   }
 
   svg defs {
-    stroke: black;
+    stroke: #1d1d1d;
   }
 
   #fullName,
   #email,
   #reason,
   #submitt {
-    border-color: black;
+    border-color: #1d1d1d;
   }
 
   .sub-header {
-    color: black;
+    color: #1d1d1d;
   }
 
   .Menu-drawer-body {
-    color: black;
+    color: #1d1d1d;
+    margin-top: 50px;
   }
 
   @keyframes stroke {
     0% {
       fill: rgba(72, 138, 20, 0);
-      stroke: black;
+      stroke: #1d1d1d;
       stroke-dashoffset: 55%;
       stroke-dasharray: 5% 35%;
       stroke-width: 7;
@@ -381,19 +379,19 @@ svg defs {
 
     50% {
       fill: rgba(72, 138, 20, 0);
-      stroke: black;
+      stroke: #1d1d1d;
       stroke-width: 1;
     }
 
     75% {
       fill: rgba(72, 138, 20, 0);
-      stroke: black;
+      stroke: #1d1d1d;
       stroke-width: 5;
     }
 
     100% {
       fill: rgba(72, 138, 20, 0);
-      stroke: black;
+      stroke: #1d1d1d;
       stroke-dashoffset: -25%;
       stroke-dasharray: 50% 0;
       stroke-width: 7;

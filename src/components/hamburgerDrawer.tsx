@@ -13,8 +13,8 @@ import {
 import BrandWhiteLogo from "../logo-white.svg";
 import TermsAndLiscences from "./termsAndLiscences";
 import PrivacyAndPolicy from "./privacyPolicy";
-import { VscChromeClose } from "react-icons/vsc";
 import { useTranslation } from "react-i18next";
+import { VscChromeClose } from "react-icons/vsc";
 
 interface CustomDrawerProps {
   isOpen: boolean;
@@ -22,7 +22,7 @@ interface CustomDrawerProps {
   btnRef: React.RefObject<HTMLButtonElement>;
 }
 const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
-  isOpen = true,
+  isOpen,
   onClose,
   btnRef,
 }) => {
@@ -42,10 +42,10 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     setIsNavButtonsHidden(true);
 
     if (id === "privacy") {
-      setCurrentNav("Privacy and Policiy");
+      setCurrentNav("Privacy & Policy");
       setIsPrivacyHidden(false);
     } else if (id === "terms") {
-      setCurrentNav("Terms and Conditions");
+      setCurrentNav("Terms & Conditions");
       setIsTermsHidden(false);
     }
   };
@@ -61,8 +61,9 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     } else {
       i18n.changeLanguage("en");
     }
-    onClose();
+    //     onClose();
   };
+
   return (
     <Drawer
       finalFocusRef={btnRef}
@@ -71,16 +72,15 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
       isOpen={isOpen}
       size={"xs"}
       autoFocus={false}
+      styleConfig={{ bottom: 10 }}
     >
       <DrawerOverlay />
-      <DrawerContent className="Menu-drawer">
-        <DrawerCloseButton fontSize={"1.3rem"} variant={"none"} />
+      <DrawerContent className="Menu-drawer" overflow={"scroll"}>
         <DrawerHeader
           display={"flex"}
           flexDirection={"column"}
-          justifyContent={"start"}
+          justifyContent={"end"}
           fontSize={"large"}
-          borderBottomWidth=".9px"
         >
           <Box>
             <img
@@ -89,7 +89,18 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
               alt="blackLogo"
             />
           </Box>
-          <Box display={"flex"} justifyContent={"end"}>
+
+          <Box display={"flex"} justifyContent={"space-between"}>
+            <Button
+              variant={"none"}
+              alignContent={"center"}
+              justifyContent={"start"}
+              visibility={isNavButtonsHidden ? "initial" : "hidden"}
+              onClick={() => onCloseSubNavMenu()}
+              width={"fit-content"}
+            >
+              <VscChromeClose /> &nbsp;Close Me
+            </Button>
             <Text fontSize={"2xl"}>{currentNav}</Text>
           </Box>
         </DrawerHeader>
@@ -118,14 +129,14 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
             variant={"none"}
             hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"large"}>Terms & Liscenses</Text>
+            <Text fontSize={"large"}>Terms & Conditions</Text>
           </Button>
           <Button
-            variant={"none"}
             hidden={isNavButtonsHidden}
             onClick={() => onNavBtnClick("privacy")}
+            variant={"none"}
           >
-            <Text fontSize={"large"}>Pivacy & Policy</Text>
+            <Text fontSize={"large"}>Privacy & Policy</Text>
           </Button>
           <TermsAndLiscences isHidden={isTermsHidden} />
           <PrivacyAndPolicy isHidden={isPrivacyHidden} />
