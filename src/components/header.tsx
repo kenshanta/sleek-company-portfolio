@@ -36,6 +36,12 @@ const AppHeader: React.FC<AppHeaderProps> = ({
         </GridItem>
       </Grid>
       <GridItem className="Header-banner" textColor={"white"}>
+        <input
+          onClick={() => document.body.classList.toggle("light")}
+          type="checkbox"
+          className="theme-checkbox"
+        ></input>
+
         <Work2GetherLogo />
         <GridItem
           justifyContent={"center"}
