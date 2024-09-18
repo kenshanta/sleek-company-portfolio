@@ -20,12 +20,7 @@ export default function HomePage() {
   };
   return (
     <Grid className="App">
-      <AppHeader
-        btnRef={btnRef}
-        onClose={onClose}
-        isOpen={isOpen}
-        onOpen={onOpen}
-      />
+      <AppHeader onClose={onClose} isOpen={isOpen} onOpen={onOpen} />
       <HamburgerDrawer
         btnRef={btnRef}
         isOpen={isOpen}
