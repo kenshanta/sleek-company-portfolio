@@ -1,16 +1,14 @@
 import React from "react";
 import {
   Drawer,
-  DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
   DrawerHeader,
   DrawerBody,
   Text,
   Button,
   Box,
 } from "@chakra-ui/react";
-import BrandWhiteLogo from "../logo-white.svg";
+
 import TermsAndLiscences from "./termsAndLiscences";
 import PrivacyAndPolicy from "./privacyPolicy";
 import { useTranslation } from "react-i18next";
@@ -61,7 +59,7 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
     } else {
       i18n.changeLanguage("en");
     }
-    //     onClose();
+    onClose();
   };
 
   return (
@@ -70,73 +68,64 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
       placement="top"
       onClose={onCloseSubNavMenu}
       isOpen={isOpen}
-      size={"xs"}
       autoFocus={false}
       styleConfig={{ bottom: 10 }}
     >
-      <DrawerOverlay />
-      <DrawerContent className="Menu-drawer" overflow={"scroll"}>
-        <DrawerHeader
-          display={"flex"}
-          flexDirection={"column"}
-          justifyContent={"end"}
-          fontSize={"large"}
-        >
-          <Box>
-            <img
-              className="Menu-drawer-logo"
-              src={BrandWhiteLogo}
-              alt="blackLogo"
-            />
-          </Box>
-
+      <DrawerContent className="Menu-drawer">
+        <DrawerHeader fontSize={"large"}>
           <Box display={"flex"} justifyContent={"space-between"}>
             <Button
               variant={"none"}
-              alignContent={"center"}
-              justifyContent={"start"}
               visibility={isNavButtonsHidden ? "initial" : "hidden"}
               onClick={() => onCloseSubNavMenu()}
               width={"fit-content"}
             >
               <VscChromeClose /> &nbsp;Close Me
             </Button>
-            <Text fontSize={"2xl"}>{currentNav}</Text>
+
+            <Text padding={1} fontSize={"2xl"}>
+              {currentNav}
+            </Text>
           </Box>
         </DrawerHeader>
-
-        <DrawerBody className="Menu-drawer-body">
+        <DrawerBody className="Menu-drawer-body" overflow={"scroll"}>
           <Button
             onClick={() => onLangChange()}
             variant={"none"}
-            hidden={isNavButtonsHidden}
             width={"fit-content"}
+            hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"large"}>
+            <Text as={"u"} fontSize={"large"}>
               {i18n.language === "en" ? "Deutsch" : "English"}
             </Text>
           </Button>
           <Button
             onClick={() => scrollToIndex("componentToScrollTo")}
             variant={"none"}
-            hidden={isNavButtonsHidden}
             width={"fit-content"}
+            hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"large"}>Contact</Text>
+            <Text as={"u"} fontSize={"large"}>
+              Contact
+            </Text>
           </Button>
           <Button
             onClick={() => onNavBtnClick("terms")}
             variant={"none"}
             hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"large"}>Terms & Conditions</Text>
+            <Text as={"u"} fontSize={"large"}>
+              Terms & Conditions
+            </Text>
           </Button>
           <Button
-            hidden={isNavButtonsHidden}
             onClick={() => onNavBtnClick("privacy")}
             variant={"none"}
+            hidden={isNavButtonsHidden}
           >
-            <Text fontSize={"large"}>Privacy & Policy</Text>
+            <Text as={"u"} fontSize={"large"}>
+              Privacy & Policy
+            </Text>
           </Button>
           <TermsAndLiscences isHidden={isTermsHidden} />
           <PrivacyAndPolicy isHidden={isPrivacyHidden} />
