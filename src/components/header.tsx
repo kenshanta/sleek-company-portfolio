@@ -3,21 +3,14 @@ import { Grid, GridItem, Text, Box, Image } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
 import Work2GetherLogo from "../Work2gether.svg?react";
 import { t } from "i18next";
-import HamburgerDrawer from "./hamburgerDrawer";
+
 interface AppHeaderProps {
   onOpen: () => void;
   isOpen: boolean;
-  btnRef: React.RefObject<HTMLButtonElement>;
-
   onClose: () => void;
 }
 
-const AppHeader: React.FC<AppHeaderProps> = ({
-  onOpen,
-  isOpen,
-  onClose,
-  btnRef,
-}) => {
+const AppHeader: React.FC<AppHeaderProps> = ({ onOpen, isOpen, onClose }) => {
   return (
     <>
       <Grid className="App-header">
