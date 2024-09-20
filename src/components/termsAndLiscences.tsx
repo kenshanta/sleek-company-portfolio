@@ -21,37 +21,33 @@ const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
         "2xl": "2rem 31rem 0 31rem",
       }}
     >
-      <Text fontWeight="bold">{t("googleMapsGeneralTermsAndConditions")}</Text>
+      <b>{t("googleMapsGeneralTermsAndConditions")}</b>
       <section>
-        <Text fontWeight="bold"> {t("scopeReservationChanges")}</Text>
+        <b> {t("scopeReservationChanges")}</b>
         <ul>
           {t("scopeReservationChangesList", {
             returnObjects: true,
           }).map((listItem: string, i: number) => (
             <li key={i}>
-              <Text>{listItem}</Text>
+              <p>{listItem}</p>
             </li>
           ))}
         </ul>
       </section>
       <section>
-        <Text fontWeight="bold">
-          {t("principleOfEqualityAndMaximumDurationOfRelease")}
-        </Text>
+        <b>{t("principleOfEqualityAndMaximumDurationOfRelease")}</b>
         <ul>
           {t("principleOfEqualityAndMaximumDurationOfReleaseList", {
             returnObjects: true,
           }).map((listItem: string, i: number) => (
             <li key={i}>
-              <Text>{listItem}</Text>
+              <p>{listItem}</p>
             </li>
           ))}
         </ul>
       </section>
       <section>
-        <Text fontWeight="bold">
-          {t("minimumDutyPeriodsSurchargesAndBilling")}
-        </Text>
+        <b>{t("minimumDutyPeriodsSurchargesAndBilling")}</b>
         <ul>
           {t("minimumDutyPeriodsSurchargesAndBillingList", {
             returnObjects: true,
@@ -63,36 +59,34 @@ const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
         </ul>
       </section>
       <section>
-        <Text fontWeight="bold">{t("scopeAndReservationOfChanges")}</Text>
+        <b>{t("scopeAndReservationOfChanges")}</b>
         <ul>
           {t("scopeReservationChangesList", { returnObjects: true }).map(
             (listItem: string, i: number) => (
               <li key={i}>
-                <Text>{listItem}</Text>
+                <p>{listItem}</p>
               </li>
             )
           )}
         </ul>
       </section>
       <section>
-        <Text fontWeight="bold">
-          {t("principleOfEqualityAndMaximumDurationOfRelease")}
-        </Text>
+        <b>{t("principleOfEqualityAndMaximumDurationOfRelease")}</b>
         <ul>
           {t("principleOfEqualityAndMaximumDurationOfReleaseList", {
             returnObjects: true,
           }).map((listItem: string, i) => (
             <li key={i}>
-              <Text>{listItem}</Text>
+              <p>{listItem}</p>
             </li>
           ))}
         </ul>
       </section>
     </Box>
     // <Text visibility={isHidden ? "hidden" : "initial"}>
-    //   Google Maps General Terms and Conditions of Work2gether UC - May 2020
+    //   Google Maps General Terms and Conditions of Sarkis UC - May 2020
     //   Scope and Reservation of Changes These general terms and conditions (AGB)
-    //   apply to every legal transaction between work2gether (FW) and the client
+    //   apply to every legal transaction between Sarkis (FW) and the client
     //   (AG). Other agreements or arrangements are only valid if expressly agreed
     //   and confirmed in writing with FW. FW provides personnel under temporary
     //   employment contracts and reserves the right to change terms and conditions
@@ -112,7 +106,7 @@ const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
     //   Obligations of the Client The AG must ensure a safe working environment
     //   and comply with applicable regulations. Provision of gender-separate
     //   sanitary facilities and access for FW is required. Obligations of
-    //   Work2gether Employees provided are selected according to AG's
+    //   Sarkis Employees provided are selected according to AG's
     //   requirements, with replacements available if necessary. FW's obligation to
     //   perform is limited to named employees in the hourly certificate.
     //   Recruitment, Placement Fees Placement fees apply if a contractual
@@ -122,7 +116,7 @@ const TermsAndLiscences: React.FC<TermsAndLiscencesProps> = ({ isHidden }) => {
     //   confidentiality regarding transmitted data and comply with data protection
     //   laws. FW employees are bound by confidentiality agreements. Cancellation
     //   Policy Fees for personnel order cancellation depend on the timing of
-    //   cancellation. Liability of Work2gether and Client FW is liable for proper
+    //   cancellation. Liability of Sarkis and Client FW is liable for proper
     //   selection and provision of temporary workers. The AG is liable for damages
     //   resulting from incomplete or incorrect information provided. Place of
     //   Jurisdiction and Applicable Law Disputes are subject to the jurisdiction

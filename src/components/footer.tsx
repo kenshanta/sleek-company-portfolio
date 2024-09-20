@@ -14,23 +14,21 @@ export default function AppFooter() {
         gap={"4"}
       >
         <GridItem display={"flex"}>
-          <Text fontWeight={"bold"} fontSize={"larger"}>
-            {t("getInTouch")}
-          </Text>
+          <Text fontSize={"4vmin"}>{t("getInTouch")}</Text>
         </GridItem>
         <GridItem>
           <a href="https://www.instagram.com/kovlekjian/">
-            <FaInstagram size={"6vmin"} />
+            <FaInstagram size={"5vmin"} />
           </a>
         </GridItem>
         <GridItem>
           <a href="mailto:sako.orange@gmail.com?Subject=Hello%20User">
-            <MdAlternateEmail size={"6vmin"} />
+            <MdAlternateEmail size={"5vmin"} />
           </a>
         </GridItem>
         <GridItem>
           <a href="https://github.com/kenshanta">
-            <FaGithub size={"6vmin"} />
+            <FaGithub size={"5vmin"} />
           </a>
         </GridItem>
       </GridItem>

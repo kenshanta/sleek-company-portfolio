@@ -8,16 +8,9 @@ import HamburgerDrawer from "../components/hamburgerDrawer";
 import "../i18n";
 
 export default function HomePage() {
-  const { isOpen, onOpen, onClose, getButtonProps } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef<HTMLButtonElement>(null);
-  console.log(isOpen, getButtonProps(), "------");
-  const toggleMenu = () => {
-    if (isOpen) {
-      return onClose();
-    } else {
-      return onOpen();
-    }
-  };
+
   return (
     <Grid className="App">
       <AppHeader onClose={onClose} isOpen={isOpen} onOpen={onOpen} />

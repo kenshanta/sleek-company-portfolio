@@ -43,8 +43,8 @@ const AppBody: React.FC<AppBodyProps> = () => {
         sm: "3.5rem",
         md: "4rem 7rem 4rem 7rem",
         lg: "7rem 10rem 7rem 10rem",
-        xl: "10rem 19.5rem 10rem 19.5rem",
-        "2xl": "0 29rem 0 29rem",
+        xl: "7rem 15.5rem 7rem 15.5rem",
+        "2xl": "8rem 17.5rem 8rem 17.5rem",
       }}
     >
       <ToastContainer />
