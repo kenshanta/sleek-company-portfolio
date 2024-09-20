@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, GridItem, Text, Box, Image } from "@chakra-ui/react";
 import BrandLogo from "../logo-white.svg";
-import Work2GetherLogo from "../Work2gether.svg?react";
+import SlkCmpLogo from "../SlkCmpLogo.svg?react";
 import { t } from "i18next";
 
 interface AppHeaderProps {
@@ -29,13 +29,14 @@ const AppHeader: React.FC<AppHeaderProps> = ({ onOpen, isOpen, onClose }) => {
         </GridItem>
       </Grid>
       <GridItem className="Header-banner" textColor={"white"}>
-        <input
-          onClick={() => document.body.classList.toggle("light")}
+        {/* TODO: Enable this feature once figured out dark mode theme on chakra-ui
+         <input
+          onClick={() => document.body.classList.toggle("dark-theme")}
           type="checkbox"
           className="theme-checkbox"
-        ></input>
+        ></input> */}
 
-        <Work2GetherLogo />
+        <SlkCmpLogo />
         <GridItem
           justifyContent={"center"}
           display={"flex"}

@@ -7,6 +7,8 @@ import {
   Text,
   Button,
   Box,
+  Grid,
+  GridItem,
 } from "@chakra-ui/react";
 
 import TermsAndLiscences from "./termsAndLiscences";
@@ -72,22 +74,17 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
       styleConfig={{ bottom: 10 }}
     >
       <DrawerContent className="Menu-drawer">
-        <DrawerHeader fontSize={"large"}>
-          <Box display={"flex"} justifyContent={"space-between"}>
-            <Button
-              variant={"none"}
-              visibility={isNavButtonsHidden ? "initial" : "hidden"}
-              onClick={() => onCloseSubNavMenu()}
-              width={"fit-content"}
-            >
-              <VscChromeClose /> &nbsp;Close Me
-            </Button>
+        <DrawerHeader className="Menu-drawer-logo">
+          <Button
+            visibility={isNavButtonsHidden ? "initial" : "hidden"}
+            onClick={() => onCloseSubNavMenu()}
+          >
+            <VscChromeClose />
+          </Button>
 
-            <Text padding={1} fontSize={"2xl"}>
-              {currentNav}
-            </Text>
-          </Box>
+          <i>{currentNav}</i>
         </DrawerHeader>
+
         <DrawerBody className="Menu-drawer-body" overflow={"scroll"}>
           <Button
             onClick={() => onLangChange()}
@@ -95,9 +92,7 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
             width={"fit-content"}
             hidden={isNavButtonsHidden}
           >
-            <Text as={"u"} fontSize={"large"}>
-              {i18n.language === "en" ? "Deutsch" : "English"}
-            </Text>
+            <u>{i18n.language === "en" ? "Deutsch" : "English"}</u>
           </Button>
           <Button
             onClick={() => scrollToIndex("componentToScrollTo")}
@@ -105,27 +100,21 @@ const HamburgerDrawer: React.FC<CustomDrawerProps> = ({
             width={"fit-content"}
             hidden={isNavButtonsHidden}
           >
-            <Text as={"u"} fontSize={"large"}>
-              Contact
-            </Text>
+            <u>Contact</u>
           </Button>
           <Button
             onClick={() => onNavBtnClick("terms")}
             variant={"none"}
             hidden={isNavButtonsHidden}
           >
-            <Text as={"u"} fontSize={"large"}>
-              Terms & Conditions
-            </Text>
+            <u>Terms & Conditions</u>
           </Button>
           <Button
             onClick={() => onNavBtnClick("privacy")}
             variant={"none"}
             hidden={isNavButtonsHidden}
           >
-            <Text as={"u"} fontSize={"large"}>
-              Privacy & Policy
-            </Text>
+            <u>Privacy & Policy</u>
           </Button>
           <TermsAndLiscences isHidden={isTermsHidden} />
           <PrivacyAndPolicy isHidden={isPrivacyHidden} />
